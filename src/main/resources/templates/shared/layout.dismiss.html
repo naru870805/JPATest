@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="robots" content="noindex,nofollow" />
+	<link rel="canonical" href="{{ document_uri }}">
+	<title>{{ child.title }}</title>
+	<meta name="description" content="세상에 단 하나뿐인 웨딩홀섭외리스트" />
+	<meta property="og:image" content="https://www.sinbuya.com/img/og.jpg">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ child.metaTitle }}" />
+	<meta property="og:url" content="{{ document_uri }}">
+	<meta property="og:description" content="세상에 단 하나뿐인 웨딩홀섭외리스트" />
+	
+	<meta property="me:feed:serviceId" content="website" />
+	<meta name="format-detection" content="telephone=no" />
+	<link href="/assets/style.min.css" rel="stylesheet">
+	<link href="/assets/fonts.css" rel="stylesheet" type="text/css" media="all and (min-width: 1024px)">
+	<link href="/themes/{{ skin }}/style.css" rel="stylesheet">
+
+	<script src="/assets/script.min.js"></script>
+	<script type="text/javascript">
+		var host = "{{ host }}";
+		var context_path = "";
+	</script>
+
+</head>
+<body class="{{ body_class }}">
+	<header>
+		<a href="/"><img src="img/bi.png" alt="신부야"></a>
+	</header>
+
+	{% block dismiss_content %}{% endblock %}
+	
+	<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="pswp__bg"></div>
+		<div class="pswp__scroll-wrap">
+			<div class="pswp__container">
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+				<div class="pswp__item"></div>
+			</div>
+			<div class="pswp__ui pswp__ui--hidden">
+				<div class="pswp__top-bar">
+					<div class="pswp__counter"></div>
+					<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+					<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+	
+					<div class="pswp__preloader">
+						<div class="pswp__preloader__icn">
+							<div class="pswp__preloader__cut">
+								<div class="pswp__preloader__donut"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+				<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+				<div class="pswp__caption">
+					<div class="pswp__caption__center"></div>
+				</div>
+	
+			</div>
+	
+		</div>
+	
+	</div>
+	
+	<div id="beauty-alert" tab-index="-1">
+		<i class="fal fa-heart fa-3x"></i>
+		<h3></h3>
+		<p></p>
+	</div>
+	
+	<script src="/themes/{{ skin }}/scripts.js"></script>
+	
+	{% block scripts %}{% endblock %}
+	
+</body>
+</html>

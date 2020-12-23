@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/*reset*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin: 0;padding: 0;border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section{display: block;}
+ol, ul{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+a{color: inherit;text-decoration: none;}
+
+/*common*/
+
+.clearfix:after{display: block;clear: both;content: '';}
+.ir{display: block;text-indent: -9999px;}
+
+*{font-family: 'Noto Sans', sans-serif;letter-spacing: -1px;box-sizing: border-box;}
+body{background-color: #fafafa;}
+body.active .info, .compare{display: none;}
+body.active .compare, .info{display: block;}
+
+header{height: 50px;background-color: #db2929;}
+header a{display: block;margin: 0 auto;padding-top: 14px;width: 100px;}
+header img{display: block;width: 100%;}
+
+.director{padding: 15px 10px 20px;background-color: #fff;box-shadow: 0 0 2px 0 #ddd;}
+.director .use-director p{float: left;margin-left: 10px;}
+.director .use-director p img{float: left;margin-right: 5px;width: 30px;height: 30px;border: 1px solid #ddd;border-radius: 50%;}
+.director .use-director p span{float: left;margin-top: 6px;color: #333;font-size: 14px;font-weight: 700;}
+.director .use-director a{float: right;margin-top: 7px;color: #008000;font-size: 12px;}
+.director .use-director a svg{transform: rotate(-20deg);}
+.director>p{position: relative;margin-top: 20px;color: #333;font-size: 12px;text-align: center;}
+.director>p:before{position: absolute;top: -13px;left: 50%;margin-left: -10px;width: 20px;height: 1px;background-color: #000;content: '';}
+
+.result{margin-top: 10px;padding: 0 10px;line-height: 50px;background-color: #db2929;border-top: 1px solid #f0f0f0;}
+.result p{float: left;color: #fff;font-size: 14px;font-weight: 700;}
+.result .curating{float: right;color: #fff;font-size: 12px;letter-spacing: 0;}
+.result .curating b{font-weight: normal;}
+
+.recommen{position: relative;margin-bottom: 80px;}
+.recommen .arrow{position: absolute;top: -39px;left: 50%;margin-left: -15px;border-width: 15px;border-style: solid;border-color: transparent transparent #fafafa transparent;}
+.recommen>li{margin-top: 10px;padding: 10px 10px 20px;background-color: #fff;box-shadow: 0 0 2px 0 #ddd;}
+section.compare .recommen>li:nth-of-type(1){margin-top: 0;}
+.hall-number{position: relative;margin-bottom: 5px;padding-bottom: 5px;width: 20px;color: #333;font-size: 24px;font-weight: 700;text-align: center;}
+section.compare .hall-number{float: left;margin-right: 2px;margin-bottom: 0;padding-bottom: 0;}
+.hall-number:before{position: absolute;bottom: 0;left: 0;width: calc(100% + 3px);height: 2px;background-color: #333;content: '';}
+section.compare .hall-number:before{display: none;}
+.hall-name{line-height: 27px;}
+section.compare .hall-name{margin-top: 4px;}
+.hall-name h2{float: left;color: #333;font-size: 20px; font-weight: 800;}
+.compare .hall-name h2 { margin-top: 4px; }
+.hall-name .area{float: right;color: #888;font-size: 12px;}
+.hall-thumb{overflow-x: scroll;margin-top: 15px;}
+.hall-thumb ul{display: flex;}
+.hall-thumb ul li+li{margin-left: 5px;}
+.hall-thumb ul li img{display: block;width: 120px; background-repeat: no-repeat; height: 100px;background-position: center; }
+.boon{position: relative;margin-top: 20px;padding: 10px;border: 1px solid #ddd;border-radius: 5px;}
+.boon img{float: left;margin-right: 5px;width: 30px;height: 30px;border: 1px solid #ddd;border-radius: 50%;}
+.boon p{display: inline-block;width: calc(100% - 35px);color: #333;font-size: 12px;vertical-align: sub;}
+.boon p:before{position: absolute;top: -30px;left: 20px;border-width: 15px;border-style: solid;border-color: transparent transparent #ddd transparent;content: '';}
+.boon p:after{position: absolute;top: -29px;left: 20px;border-width: 15px;border-style: solid;border-color: transparent transparent #fff transparent;content: '';}
+.boon .recommend{float: right;padding-top: 20px;}
+.boon .recommend span{float: left;margin-right: 5px;color: #888;font-size: 12px;}
+.boon .recommend>div{float: left;position: relative;margin-top: 2px;width: 71px;height: 15px;background-image: url(/img/heart_back.png);background-position: 0px 0px;}
+.boon .recommend>div>div{position: absolute;top: 0;bottom: 0;width: 100%;background-image: url(/img/heart_back.png);background-position: 0px -20px;}
+.info-btn{margin-top: 20px;color: #333;font-size: 12px;font-weight: 700;text-align: center;}
+.info-btn svg{margin-left: 5px;}
+
+.info-view{display: none;overflow-x: scroll;margin-top: 20px;}
+.info-view.active{display: block;}
+.info-view ul{display: flex;}
+.info-view ul .hall-table{min-width: 200px;border: 1px solid #ddd;}
+.info-view.length ul .hall-table{min-width: 100%;}
+.info-view ul .hall-table+.hall-table{margin-left: 10px;}
+.info-view ul .hall-table p{padding: 10px;border-bottom: 1px solid #db2929;color: #333;font-size: 12px;}
+.info-view ul .hall-table section div{padding: 10px;}
+.info-view ul .hall-table section div+div{border-top: 1px solid #ddd;}
+.info-view ul .hall-table section div label{display: block;font-size: 12px;font-weight: 700;}
+.info-view ul .hall-table section div span{display: block;margin-top: 5px;font-size: 12px;}
+
+.back{position: absolute;top: 15px;left: 10px;color: #fff;}
+
+.layer-btn{position: fixed;bottom: 0;width: 100%;}
+.layer-btn span{float: left;width: 50%;line-height: 50px;color: #fff;font-size: 14px;text-align: center;letter-spacing: -2px;}
+.layer-btn .hall-btn{background-color: #595959;}
+.layer-btn .reservation{position: relative;background-color: #db2929;}
+.layer-btn .reservation:before{position: absolute;top: -15px;left: 25px;width: 69px;height: 25px;background-image: url(/img/reservation.png);background-size: 69px 25px;animation: reservation 1.5s infinite;content: '';}
+
+.reservation-popup{display: none;position: fixed;top: 0;right: 0;bottom: 0;left: 0;}
+.reservation-popup.active{display: block;}
+.shadow-bg{position: absolute;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.7);}
+.reservation-form{position: absolute;top: 50%;left: 10px;right: 10px;background-color: #fff;transform: translateY(-50%);}
+.reservation-form .reservation-name{display: block;margin-bottom: 10px;color: #333;font-size: 16px;font-weight: 700;}
+.reservation-form .calendar{margin: 10px 30px 20px;padding-bottom: 20px;border-bottom: 2px solid #db2929;}
+.reservation-form .calendar p{margin-bottom: 10px;color: #db2929;font-size: 16px;font-weight: 700;}
+.reservation-form .calendar input{display: block;padding: 0;width: 100%;height: 30px;background-color: #e9ecef;border: 1px solid rgba(0, 0, 0, 0.15);padding-left: 10px;}
+.reservation-form .calendar input.parsley-error{ background-color: #db292957; }
+
+.ui-datepicker{background-color: #fff;border: 1px solid #c5c5c5;border-radius: 3px;color: #333;}
+.ui-datepicker .ui-datepicker-header{border-bottom: 1px solid #fff;}
+
+
+.reservation-form .close{position: absolute;top: 10px;right: 10px;color: #000;}
+.reservation-form .hall-check{margin: 0 30px;}
+.reservation-form .hall-check ul{max-height: 180px;overflow-y: scroll;}
+.reservation-form .hall-check ul li{line-height: 40px;}
+.reservation-form .hall-check ul li input{display: none;}
+.reservation-form .hall-check ul li label{display: block;position: relative;color: #333;font-size: 14px;text-align: left;padding-left: 30px;}
+.reservation-form .hall-check ul li label:before{position: absolute;top: 10px;left: 0;width: 20px;height: 20px;border: 1px solid #db2929;content: '';}
+.reservation-form .hall-check ul li label:after{display: none;position: absolute;top: 13px;left: 3px;width: 14px;height: 14px;background-color: #db2929;content: '';}
+.reservation-form .hall-check ul li input:checked+label:after{display: block;}
+.reservation-form .hall-check p{margin: 10px 0;color: #888;font-size: 12px; position: relative;}
+.reservation-form .hall-check p>span{display: none;}
+.reservation-form .hall-check p.parsley-error>span{display: block; position: absolute; top: 1px; left: 20px; color: #db2929;}
+.reservation-form .submit{display: block;width: 100%;height: 50px;background-color: #db2929;outline: 0;border: 0;color: #fff;font-size: 14px;}
+
+.ui-datepicker .ui-datepicker-header {
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #fff;
+}
+
+.ui-datepicker .ui-datepicker-next, .ui-datepicker .ui-datepicker-next-hover
+	{
+	height: 34px;
+	top: 4px;
+	right: 2px;
+}
+
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-prev-hover
+	{
+	height: 34px;
+	top: 4px;
+	left: 2px;
+}
+
+.ui-datepicker td {
+	text-align: center;
+}
+
+.ui-datepicker td.ui-datepicker-other-month {
+	font-size: 0px;
+	line-height: 0px;
+	text-indent: -999;
+}
+
+.ui-datepicker td.ui-datepicker-other-month:before {
+	content: ' ';
+	width: 3px;
+	height: 3px;
+	border-radius: 100%;
+	background: #555;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.ui-datepicker.ui-widget-content td .ui-state-default {
+	background: #f5f5f5;
+	border: 1px solid #f5f5f5;
+	text-align: center;
+	font-family: 'Myriad Pro';
+	font-size: 12px;
+	font-weight: 700;
+	color: #aaaaaa;
+	line-height: 20px;
+}
+
+.ui-datepicker .ui-datepicker-week-end:last-child span, .ui-datepicker .ui-datepicker-week-end:last-child a
+	{
+	color: #2f98e2;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+	width: 25px;
+	height: 25px;
+	border-radius: 100%;
+	margin: 2px auto;
+}
+
+.ui-datepicker.ui-widget-content td .ui-state-highlight {
+	color: #333;
+}
+
+.ui-datepicker.ui-widget-content td .ui-state-hover {
+	background: #777;
+	border: 1px solid #777;
+	color: #fff !important;
+}
+
+.ui-datepicker.ui-widget-content td .ui-state-active {
+	background: #333;
+	border: 1px solid #333;
+	color: #fff !important;
+}
+
+.ui-datepicker .ui-datepicker-week-end:first-child span, .ui-datepicker .ui-datepicker-week-end:first-child a
+	{
+	color: #db2929;
+}
+
+#ui-datepicker-div {
+	z-index: 15 !important;
+}
+
+.ui-datepicker .ui-datepicker-title select {
+    font-size: 1em;
+    margin: 1px 0;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 0;
+    height: 25px;
+    background-color: #fff;
+    margin-right: 5px;
+    position: relative;
+    top: 5px;	
+}
+
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {
+	width: 45%;
+}
+
+.ui-datepicker select.ui-datepicker-year {
+	top: 4px;
+}
+
+#beauty-alert {
+	display: none;
+	position: fixed;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	background: rgba(255, 0, 0, 0.7);
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 50px 20px;
+	color: #fff;
+	margin-left: -125px;
+	margin-top: -125px;
+	tab-index: -1;
+	position: fixed;
+}
+
+#beauty-alert i, #beauty-alert svg {
+	color: #fff;
+	font-size: 50px;
+}
+
+#beauty-alert h3 {
+	font-size: 18px;
+}
+
+/*animation*/
+
+@keyframes reservation{
+	0%{
+		top: -15px;
+	}
+	50%{
+		top: -20px;
+	}
+	100%{
+		top: -15px;
+	}
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	
+	<link rel="canonical" href="{{ document_uri }}">
+	<title>{{ child.metaTitle }}</title>
+	<meta name="description" content="{{ child.metaDesc }}" />
+	<meta name="keywords" content="{{ child.metaKeywords }}">
+	
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="{{ child.metaTitle }}" />
+	<meta property="og:url" content="{{ document_uri }}">
+	<meta property="og:description" content="{{ child.metaDesc }}" />
+	
+	<meta property="og:image" content="http://www.sinbuya.com/app_img/thumb/{{ child.bgImg }}?w=1920&h=1200&t=crop&n=0" />
+	
+	<meta name="robots" content="index,follow">
+	<meta name="Subject" content="{{ child.metaTitle }} 신부야">
+	<meta name="writer" content="SINBUYA">
+	<meta name="copyright" content="©2018 SINBUYA ALL RIGHTS RESERVED.">
+	<meta name="reply-to" content="sinbuya6061@naver.com">
+	<meta name="content-language" content="kr">
+	<meta name="build" content="2020. 05. 21">
+	<meta http-equiv="Cache-Control" content="No-Cache">
+	<meta http-equiv="Pragma" content="No-Cache">
+	<meta content="1 days" name="revisit-after">	
+	
+	<meta property="me:feed:serviceId" content="website" />
+	<meta name="format-detection" content="telephone=no" />
+
+	{% autoescape false %}
+	{{ child.metaData }}
+	{% endautoescape %}
+
+	<link href="/assets/style.min.css" rel="stylesheet">
+	<link href="/assets/fonts.css" rel="stylesheet" type="text/css" media="all and (min-width: 1024px)">
+	<link href="/themes/{{ skin }}/style.css" rel="stylesheet">
+
+	<script src="/assets/script.min.js"></script>
+	<script type="text/javascript">
+		var host = "{{ host }}";
+		var context_path = "";
+	</script>
+
+</head>
+<body class="{{ body_class }}">
+
+	{% block screen_content %}{% endblock %}
+	{% set locata = 'www.sinbuya.com' %}
+	{% if(child.area.id == 2) %}
+		{% set locata = 'cheonan.sinbuya.com' %}
+	{% endif %}
+	<footer>
+		<div class="wrapper">
+			<div class="brand"><a href="https://{{ locata }}"><img src="/img/bi.png"></a></div>
+			<div class="copy">
+				<a href="http://{{ locata }}">
+					현재 접속하시는 페이지는 <b>공식사이트가 아닌 신부야 제공 정보사이트</b>입니다.<br />
+					더 많은 정보를 원하시면 신부야 사이트에서 확인하실 수 있습니다.
+				</a>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="beauty-alert" tab-index="-1">
+		<i class="fa fa-heart fa-3x"></i>
+		<h3></h3>
+		<p></p>
+	</div>
+	
+	<script src="/themes/{{ skin }}/scripts.js"></script>
+	
+	{% block scripts %}{% endblock %}
+	
+</body>
+</html>

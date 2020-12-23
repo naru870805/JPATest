@@ -1,0 +1,7 @@
+/target/
+/war/
+/.settings
+/.classpath
+/.project
+.DS_Store
+Thumbs.db

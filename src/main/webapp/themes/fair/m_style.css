@@ -1,0 +1,661 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand { 
+	display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+html, body {
+	font-family: 'NanumSquare';
+	font-weight: 300;
+	letter-spacing: -0.5px;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	text-stroke: 0.6px;
+	font-size: 13px;
+	height: 100%;
+}
+
+.t-center {
+	text-align: center;
+}
+
+img {
+	width: 100%;
+}
+
+section {
+	position: relative;
+}
+
+body .animate-btn {
+	position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 10000;
+    transition: bottom .3s;
+    bottom: -60px;    	
+}
+
+body .animate-btn.active {
+	bottom: 0;
+}
+
+body .animate-btn>a {
+    display: block;
+    color: #fff;
+    background: #ee2c57;
+    padding: 13px;
+    font-size: 21px;
+    font-weight: 800;
+    z-index: 10000;	
+}
+
+.ui-datepicker select.ui-datepicker-year {
+	padding-top: 2px;
+}
+
+.ui-datepicker select.ui-datepicker-month {
+	padding-bottom: 2px;
+}
+
+.parsley-error {
+	border-color: #ffc2c2 !important;
+	background-color: #fff2f2 !important;
+}
+
+.background {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    top: 0;
+    left: 0;	
+}
+
+body>header {
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 7px;
+    letter-spacing: 5px;
+    font-size: 17px;
+}
+
+.wrapper {
+	margin: 0px auto;
+	padding: 0px 15px;
+    position: relative;	
+}
+
+section#main>div {
+	position: absolute;
+    bottom: 35px;
+    width: 100%;	
+}
+
+section#main>div>div {
+    padding: 20px;
+    text-align: center;
+    margin: 25px;
+    background: rgba(255,255,255,0.82);	
+}
+
+section#main>div>div>p {
+	margin: 0;
+    font-size: 17px;
+    font-weight: 400;	
+}
+
+section#main>div>div>.btn-list {
+    text-align: center;
+    padding-top: 10px;	
+}
+
+section#main>div>div>.btn-list>a {
+    display: block;
+    padding: 8px 0;
+    background-color: #ee2c57;
+    margin: 0 auto;
+    width: 220px;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+section#main>div>div>.btn-list>a.way {
+	margin-bottom: 0;
+	background: #bc8dbf;
+}
+
+section#main>div>div>img {
+    width: 210px;
+    margin-top: 15px;	
+}
+
+section#intro .background {
+	display: none;
+}
+
+section#intro>img {
+	z-index: 1;
+	position: relative;
+}
+
+section#reason>div {
+	position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;	
+}
+
+section#reason>div>div {
+    width: calc(100% - 120px);
+    margin: 0 auto;	
+}
+
+section#reason .owl-theme .owl-dots .owl-dot span {
+	width: 30px;
+    height: 15px;
+    border-radius: 10px;
+    box-shadow: inset 3px 3px 0px #bdbdbd;
+    background: #e2e2e2;
+    transition: all .3s;	
+}
+
+section#reason .owl-theme .owl-dots .owl-dot.active span {
+	background: #494949;
+    box-shadow: none;
+    width: 80px;	
+}
+
+section#reason .owl-theme .owl-dots {
+    margin-top: 13px;
+}
+
+section#contacts #contact {
+    position: relative;
+    width: 100%;	
+}
+
+section#contacts #contact>div {
+    padding: 0 40px;
+    position: relative;
+    padding-top: 440px;
+}
+
+section#contacts>img {
+	position: relative;
+	z-index: 1;
+}
+
+section#contacts>div {
+    height: 390px;	
+}
+
+section#contacts #contact>div>#contacts_form .form-group {
+	margin-bottom: 5px;
+}
+
+section#contacts #contact {
+    position: relative;
+    width: 100%;
+    top: -420px;
+    overflow: hidden;
+    height: 811px;
+}
+
+section#contacts #contact>div>#contacts_form .custom {
+    display: inline-block;
+    margin-right: 30px;	
+}
+
+section#contacts #contact>div>#contacts_form .custom input {
+	display: none;
+}
+
+section#contacts #contact>div>#contacts_form .custom span {
+    content: '';
+    width: 21px;
+    height: 21px;
+    display: inline-block;
+    border: 2px solid #cccbcc;
+    border-radius: 5px;
+    vertical-align: sub;
+    position: relative;	
+}
+
+section#contacts #contact>div>#contacts_form .custom input:checked+span:after {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: #7c7b7b;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 2px;	
+}
+
+section#contacts #contact>div>#contacts_form .custom label {
+    font-size: 22px;
+    padding-left: 5px;	
+}
+
+section#contacts #contact>div>#contacts_form .custom-checkbox span {
+	vertical-align: top;
+}
+
+section#contacts #contact>div>#contacts_form .custom-checkbox label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+section#contacts #contact>div>#contacts_form .custom-checkbox label a {
+	color: #ee2c57;
+}
+
+section#contacts #contact>div>#contacts_form .inputs>input,
+section#contacts #contact>div>#contacts_form .inputs>input[readonly] {
+    margin-bottom: 5px;
+    height: 45px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 0;
+    background-color: #f7f7f7;	
+}
+
+section#contacts #contact>div>#contacts_form .btn-list button {
+	font-size: 20px;
+    width: 100%;
+    display: block;
+    font-weight: 800;
+    color: #fff;
+    background: #ee2c57;
+    border-radius: 7px;
+    padding: 12px;	
+}
+
+section#contacts #contact>div>#contacts_form .warning-text {
+    font-size: 17px;
+    font-weight: 400;	
+}
+
+@media(max-width: 355px) {
+	section#contacts #contact>div>#contacts_form .custom-checkbox label {
+    	font-size: 13px;
+    	font-weight: 300;
+	}
+}
+
+section#sdmb .frames {
+	padding-bottom: 30px;
+}
+
+section#sdmb .frames>div {
+    width: 360px;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;	
+}
+
+section#sdmb .frames>div .rolling {
+	position: absolute;
+    top: 159px;
+    width: 337px;
+    height: 270px;
+    overflow: hidden;
+    left: 12px;	
+}
+
+section#sdmb .frames>div .owl-carousel .owl-item img {
+    height: 233px;	
+    background-size: cover;
+}
+
+@media(max-width: 380px) {
+	section#sdmb .frames>div {
+	    width: 310px;
+	    margin: 0 auto;
+	    padding-top: 40px;
+	    position: relative;	
+	}
+	
+	section#sdmb .frames>div .rolling {
+	    position: absolute;
+	    top: 134px;
+	    width: 290px;
+	    height: 270px;
+	    overflow: hidden;
+	    left: 10px;
+	}
+	
+	section#sdmb .frames>div .owl-carousel .owl-item img {
+	    height: 201px;	
+	}
+}
+
+@media(max-width: 330px) {
+	section#sdmb .frames>div {
+	    width: 300px;
+	    margin: 0 auto;
+	    padding-top: 40px;
+	    position: relative;	
+	}
+	
+	section#sdmb .frames>div .rolling {
+	    position: absolute;
+	    top: 130px;
+	    width: 281px;
+	    height: 270px;
+	    overflow: hidden;
+	    left: 10px;
+	}
+	
+	section#sdmb .frames>div .owl-carousel .owl-item img {
+	    height: 195px;	
+	}
+}
+
+section#articleList {
+    background-color: #24262a;
+    padding: 20px 10px;	
+}
+
+section#articleList * {
+	margin: 0;
+	color: #856969;
+	font-size: 15px;
+}
+
+section#articleList h3 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: 800;	
+}
+
+section#articleList .box {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+section#articleList .box:last-child {
+	margin: 0;
+}
+
+section#articleList .box>p:first-child {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    background: #24262a;
+    padding-right: 20px;	
+}
+
+section#articleList .box>span {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    top: 17px;
+    z-index: 1;
+    border-top: 2px solid #66686a;
+    right: -25px;	
+}
+
+#beauty-alert {
+	display: none;
+	position: fixed;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	background: rgba(255, 0, 0, 0.7);
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 50px 20px;
+	color: #fff;
+	margin-left: -125px;
+	margin-top: -125px;
+	tab-index: -1;
+	position: fixed;
+}
+
+#beauty-alert i, #beauty-alert svg {
+	color: #fff;
+	font-size: 50px;
+}
+
+#beauty-alert h3 {
+	font-size: 18px;
+}
+
+section#honeymoon>img {
+	position: absolute;
+    z-index: 12;
+    width: 57%;
+    top: 14%;	
+}
+
+section#honeymoon .owl-background {
+    bottom: 0;
+    height: 50%;
+    left: 0;
+    background: #000;
+    content: '';
+    position: absolute;
+    width: 100%;
+    opacity: 0.6;	
+}
+
+section#honeymoon .owl-bottom {
+    position: absolute;
+    bottom: 35px;
+    width: 75%;
+    right: 0;	
+}
+
+section#honeymoon .menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    position: absolute;
+    bottom: calc(50% - 44px);
+    width: 100%;
+    z-index: 1;
+    transition: all .5s;	
+}
+
+section#honeymoon .menu>li {
+    float: left;
+    width: 20%;
+    padding: 10px 0;
+    color: #00dfb8;	
+}
+
+section#honeymoon .menu>li:nth-child(3) {
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 0;
+}
+
+body>footer {
+	padding: 15px 0px 50px;
+	background: #353744;
+	font-weight: 600;
+}
+
+footer .help_lst a {
+	display: inline-block;
+	padding: 1px 10px;
+	line-height: .9rem;
+	color: #fff;
+	font-weight: 500;
+}
+
+footer .help_lst a:first-child {
+	padding-left: 0;
+}
+
+footer .legend_text {
+	text-align: center;
+	color: #666;
+}
+
+footer .footbtn_lst {
+	text-align: center;
+}
+
+footer .footbtn_lst a {
+	display: inline-block;
+	background: #fff;
+	padding: 6px 8px;
+	margin: 0px 1px;
+	border: 1px #ddd solid;
+	color: #222;
+	font-weight: 700;
+}
+
+footer>.design-footer {
+	background: #353744;
+}
+
+footer>.design-footer .footer-top {
+    padding: 10px;
+    border-bottom: 1px solid #5d5f69;
+    padding-top: 15px;
+}
+
+footer>.design-footer .footer-top img {
+	width: 100px;	
+}
+
+footer>.design-footer .footer-center {
+    color: #96969b;
+    padding: 20px 10px;
+    border-bottom: 1px solid #5d5f69;
+}
+
+footer>.design-footer .footer-center>div {
+	margin-bottom: 5px;
+}
+
+
+footer>.design-footer .footer-center>div>span {
+    display: inline-block;
+    padding-right: 3px;
+    margin-bottom: 5px;
+}
+
+footer>.design-footer .footer-center>div>p {
+	margin-bottom: 5px;
+}
+
+footer>.design-footer .footer-center>div.legend_text {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: left;   
+}
+
+footer>.design-footer .footer-center>div.legend_text>p {
+	text-align: left;
+}
+
+footer>.design-footer .footer-center>div.legend_text>p>a {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer>.design-footer .footer-center>div.legend_text>span {
+	margin-bottom: 0;
+}
+
+footer>.design-footer .footer-img-list {
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+footer>.design-footer .footer-img-list>div {
+	float: right;
+}
+
+footer>.design-footer .footer-img-list>div>a {
+    display: inline-block;
+    width: 28px;
+    height: 33px;
+    background-image: url(../img/simg_common.png?v=6);
+    margin-right: 5px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.facebook {
+    background-position: -401px -15px;
+    margin-right: -3px;
+}
+
+footer>.design-footer .footer-img-list>div>a.instagram {
+    background-position: -440px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.blog {
+    background-position: -479px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.cafe {
+    background-position: -518px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.kakaotalk {
+    background-position: -557px -15px;
+    margin-right: 0;	
+}

@@ -1,0 +1,58 @@
+/*reset*/
+
+@font-face{
+	font-family: 'bebasneue';
+	src: url(/fonts/BebasNeue-Regular.ttf) format('truetype');
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin: 0;padding: 0;border: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section{display: block;}
+ol, ul{list-style: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+a{color: inherit;text-decoration: none;}
+
+/*common*/
+
+.clearfix:after{display: block;clear: both;content: '';}
+.ir{display: block;text-indent: -9999px;}
+
+body{background-color: #000;font-family: "noto Sans CJK KR";}
+.wrapper{padding: 0 15px;}
+
+.font-on{font-family: 'bebasneue';}
+
+/*header*/
+
+header{height: 45px;background-color: #db2929;}
+header img{float: left;margin-top: 19px;width: 45px;margin-right:5px;width:70px;}
+header span{float: left;margin-top: 20px;margin-left: 2px;color: #fff;font-size: 11px;font-weight: 300;}
+
+/*container*/
+
+.wedding>div a{display: block;}
+.wedding>div img{display: block;width: 100%;}
+
+.all-time{padding: 25px 15px 10px;background-color: #fff;border-bottom: 1px solid #e6e6e6;}
+.all-time>span{float: left;margin-top: 35px;font-size: 14px;font-weight: 500;letter-spacing: -1px;}
+.all-time p{float: right;}
+.all-time p b{float: left;margin-top: 18px;margin-right: 7px;line-height: 37px;font-size: 45px;font-weight: 400;}
+.all-time p span{float: left;margin-top: 31px;font-size: 16px;font-weight: 700;}
+
+.keyword{padding: 25px 15px 0;padding-bottom: 10px;background-color: #fff;border-bottom: 1px solid #e6e6e6;}
+.keyword span{float: left;font-size: 14px;font-weight: 500;letter-spacing: -1px;}
+.keyword p{float: right;font-size: 14px;}
+.keyword p small{float: left;color: #414042;}
+.keyword p small+small{margin-left: 3px;}
+
+.hardship{padding-top: 13px;background-color: #fff;border-bottom: 1px solid #e6e6e6;box-sizing: border-box;}
+.hardship p{padding: 10px 15px;background-color: #faffbd;border-top: 1px solid #e6e6e6;font-size: 12px;font-weight: 700;text-align: center;letter-spacing: -0.8px;}
+
+.wedding-video{position: relative;padding-top: 30px;}
+.wedding-video:after{position: absolute;top: 0;left: 0;background-color: #fff;width: 100%;height: 80%;content: '';z-index: -1;}
+.wedding-video .video-text p{float: left;line-height: 18px;letter-spacing: -1px;}
+.wedding-video .video-text p b{font-size: 18px;}
+.wedding-video .video-text p span{display: block;color: #555;font-size: 12px;}
+.wedding-video .video-text a{float: right;margin-top: 18px;padding: 2px 8px 1px;background-color: #db2929;color: #fff;font-size: 10px;text-align: center;}
+.wedding-video .video-text a i{font-style: normal;font-size: 10px;}
+.wedding-video .video{display: block;margin-top: 5px;height: 189px;background-image: url(/img/preview/youtube.png);background-size: cover;background-position: center;}
+.copy{display: block;margin-top: 10px;padding-bottom: 25px;color: #fff;font-size: 10px;text-align: center;opacity: 0.3;}

@@ -1,0 +1,454 @@
+@charset "UTF-8";
+
+html {
+	height: 100%;
+}
+
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */ 
+select::-ms-expand { 
+	display: none;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(/img/select_btn.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: calc(100% - 5px);
+}
+
+html, body {
+	font-family: 'NanumSquare';
+	font-weight: 400;
+	letter-spacing: -0.5px;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	text-stroke: 0.6px;
+	font-size: 14px;
+	height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #ea3737;
+    margin-bottom: 10px;
+}
+
+.t-center {
+	text-align: center;
+}
+
+body {
+    position: relative;
+    min-width: 300px;
+    max-width: 640px;
+    margin: 0 auto;
+    background: #e2e0d8;	
+}
+
+#beauty-alert {
+	display: none;
+	position: fixed;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	transform: translate3d(0px, 0px, 0px);
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	background: rgba(255, 0, 0, 0.7);
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 50px 20px;
+	color: #fff;
+	margin-left: -125px;
+	margin-top: -125px;
+	tab-index: -1;
+	position: fixed;
+}
+
+#beauty-alert i, #beauty-alert svg {
+	color: #fff;
+	font-size: 50px;
+}
+
+#beauty-alert h3 {
+	font-size: 18px;
+}
+
+img {
+	width: 100%;
+}
+
+#contents {
+	background-color: #fff;
+}
+
+#main {
+	padding: 0 20px;	
+}
+
+#main .shadow-box {
+    box-shadow: -8px 0 15px #c3c3c3;	
+}
+
+#main .title {
+    background-color: #de3154;
+    padding: 10px;
+    padding-top: 30px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;	
+}
+
+#main .youtube-coupon {
+    padding: 30px 10px;	
+}
+
+#main .youtube-coupon .youtube {
+    position: relative;
+    margin-bottom: 30px;	
+}
+
+#main .youtube-coupon .youtube iframe {
+	width: 100%;
+    border: 3px solid #bfb1a2;
+    height: 30vh;	
+}
+
+#main .youtube-coupon .youtube .cover {
+    background-image: url('/img/fair2/cover.png');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;	
+}
+
+#main .youtube-coupon .youtube .cover>a {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+	background: rgba(0, 0, 0, 0.55);    
+}
+
+#main .youtube-coupon .youtube .cover>a>img {
+    width: 30px;
+    top: calc(50% - 23px);
+    position: relative;	
+}
+
+#main .youtube-coupon .coupon {
+	position: relative;
+}
+
+#main .youtube-coupon .coupon>a {
+	position: absolute;
+	height: 27%;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+
+#contact {
+    padding-bottom: 18px;
+    position: relative;
+    padding: 0 30px;	
+}
+
+#contact .background {
+    background-image: url(/img/fair2/contact.png?1592800226401);
+    position: absolute;
+    background-size: 80%;
+    background-position: top right;
+    background-repeat: no-repeat;
+    width: 100%;
+    right: 0;
+    height: 100%;	
+}
+
+#contact .frm {
+    padding-top: 30px;
+    position: relative;	
+}
+
+#contact h3 {
+	margin: 0;
+    margin-top: 25px;
+    font-size: 28px;
+    color: #b295c3;	
+}
+
+#contact h3>b {
+    font-weight: 800;	
+}
+
+#contact #contacts_form fieldset {
+	padding-top: 20px;
+}
+
+#contact #contacts_form .radios>div {
+    display: inline-block;
+    margin-right: 10px;	
+}
+
+#contact #contacts_form .radios input{
+	display: none;
+}
+
+#contact #contacts_form .radios label {
+	background: #fbe2ed;
+    color: #fff;
+    letter-spacing: 10px;
+    font-size: 17px;
+    padding: 5px 40px;
+    border-radius: 8px;	
+}
+
+#contact #contacts_form .radios input:checked+label {
+	background: #f19ec2;	
+}
+
+#contact #contacts_form input,
+#contact #contacts_form select{
+    border-radius: 8px;
+    background-color: #fbe2ed;
+    color: #333;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border: 0;
+    font-size: 14px;
+}
+
+#contact #contacts_form input::placeholder {
+	color: #333;
+}
+
+#contact #contacts_form .checkbox label{
+	margin: 0;
+    padding: 0;
+    padding-left: 35px;
+    position: relative;
+    font-size: 12px;
+    padding-bottom: 20px;    
+}
+
+#contact #contacts_form .checkbox input {
+	display: none;
+}
+
+#contact #contacts_form .checkbox span {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    background: #fbe2ed;
+    border-radius: 8px;	
+}
+
+#contact #contacts_form .checkbox input:checked+span:after {
+	width: 24px;
+    height: 24px;
+    content: '';
+    position: absolute;
+    background: #f19ec2;
+    top: 3px;
+    left: 3px;
+    border-radius: 6px;
+}
+
+#contact #contacts_form .checkbox p {
+	margin: 0;
+}
+
+#contact #contacts_form .checkbox p>a {
+	color: #ee2b57;
+}
+
+#contact #contacts_form .btn-list {
+    position: relative;
+    left: -30px;
+    width: calc(100% + 60px);	
+}
+
+#contact #contacts_form .btn-list button {
+    width: 100%;
+    background: #ee2b57;
+    color: #fff;
+    font-size: 18px;
+    padding: 15px 0;
+    font-weight: 800;	
+}
+
+
+body>footer {
+	padding: 15px 0px 50px;
+	background: #353744;
+	font-weight: 600;
+}
+
+footer .help_lst a {
+	display: inline-block;
+	padding: 1px 10px;
+	line-height: .9rem;
+	color: #fff;
+	font-weight: 500;
+}
+
+footer .help_lst a:first-child {
+	padding-left: 0;
+}
+
+footer .legend_text {
+	text-align: center;
+	color: #666;
+}
+
+footer .footbtn_lst {
+	text-align: center;
+}
+
+footer .footbtn_lst a {
+	display: inline-block;
+	background: #fff;
+	padding: 6px 8px;
+	margin: 0px 1px;
+	border: 1px #ddd solid;
+	color: #222;
+	font-weight: 700;
+}
+
+footer>.design-footer {
+	background: #353744;
+}
+
+footer>.design-footer .footer-top {
+    padding: 10px;
+    border-bottom: 1px solid #5d5f69;
+    padding-top: 15px;
+}
+
+footer>.design-footer .footer-top img {
+	width: 100px;	
+}
+
+footer>.design-footer .footer-center {
+    color: #96969b;
+    padding: 20px 10px;
+    border-bottom: 1px solid #5d5f69;
+}
+
+footer>.design-footer .footer-center>div {
+	margin-bottom: 5px;
+}
+
+
+footer>.design-footer .footer-center>div>span {
+    display: inline-block;
+    padding-right: 3px;
+    margin-bottom: 5px;
+}
+
+footer>.design-footer .footer-center>div>p {
+	margin-bottom: 5px;
+}
+
+footer>.design-footer .footer-center>div.legend_text {
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #fff;
+    text-align: left;   
+}
+
+footer>.design-footer .footer-center>div.legend_text>p {
+	text-align: left;
+}
+
+footer>.design-footer .footer-center>div.legend_text>p>a {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer>.design-footer .footer-center>div.legend_text>span {
+	margin-bottom: 0;
+}
+
+footer>.design-footer .footer-img-list {
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+footer>.design-footer .footer-img-list>div {
+	float: right;
+}
+
+footer>.design-footer .footer-img-list>div>a {
+    display: inline-block;
+    width: 28px;
+    height: 33px;
+    background-image: url(../img/simg_common.png?v=6);
+    margin-right: 5px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.facebook {
+    background-position: -401px -15px;
+    margin-right: -3px;
+}
+
+footer>.design-footer .footer-img-list>div>a.instagram {
+    background-position: -440px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.blog {
+    background-position: -479px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.cafe {
+    background-position: -518px -15px;	
+}
+
+footer>.design-footer .footer-img-list>div>a.kakaotalk {
+    background-position: -557px -15px;
+    margin-right: 0;	
+}
