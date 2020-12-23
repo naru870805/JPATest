@@ -1,14 +1,14 @@
-{% extends "default/_base" %}
+{% extends "shared/layout.default" %}
 
 {% block intro_content %}
 {% autoescape false %}
 
 <p class="main-copy">
-	{{ child.homeContent }} 
-	<b>{{ child.article.title }}</b>
+	hello world!! 
+	<b>{{ article.title }}</b>
 </p>
 <div class="thumb-box">
-	{% set imgs = toJSONArray(child.article.galleries) %}
+	{% set imgs = toJSONArray(article.galleries) %}
 	<div class="carousel">
 		<div id="main-owl" class="owl-carousel owl-theme" >
 			{% for img in imgs %}
@@ -32,7 +32,7 @@
 	<aside>
 		<div class="thumb-contact-header">
 			<div>
-				<span><b>{{ child.article.title }}</b>에 대하여</span>
+				<span><b>{{ article.title }}</b>에 대하여</span>
 				<span>더욱 자세하게 알고싶으세요?</span>
 				<span>지금상담예약하세요!</span>
 			</div>
@@ -70,20 +70,5 @@
 
 
 {% block body_content %}
-{% autoescape false %}
-
-	{% include "default/description" %}
-	
-	{% include "default/review" %}
-	
-	{% include "default/benefit" %}
-	
-	{% if child.article.pcode != "hall" %}
-	{% include "default/calculator" %}
-	{% endif %}
-	
-	{% include "default/contacts" %}
-
-
-{% endautoescape %}
+ss
 {% endblock %}
