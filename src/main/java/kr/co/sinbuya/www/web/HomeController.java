@@ -14,15 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import kr.co.sinbuya.entity.ProductArticle;
-import kr.co.sinbuya.www.service.ProductArticleService;
+import kr.co.sinbuya.entity.DevelopTest;
+import kr.co.sinbuya.www.service.TestService;
 import net.sf.json.JSONObject;
 
 @Controller
 @RequestMapping("")
 public class HomeController {
 	
-	@Autowired private ProductArticleService productArticleService;
+	@Autowired private TestService testService;
 
 	@RequestMapping("")
 	public String pages(HttpServletRequest request, HttpServletResponse response, ModelMap model, 
@@ -31,11 +31,10 @@ public class HomeController {
 		
 		
 		// 기본 인덱스 페이지
-	
-		ProductArticle article = productArticleService.findArticleById(8485L);
+
+		DevelopTest entity = testService.findById(1L);
 		
-		System.out.println(article.getTitle());
-		
+		System.out.println(entity.getContent());
 	
 		return "/default/index";
 	}

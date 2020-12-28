@@ -1,6 +1,5 @@
 package kr.co.sinbuya.entity;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -14,19 +13,27 @@ import org.hibernate.annotations.Where;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "area")
+@Table(name = "develop_test")
 @Where(clause = "`enabled` = 1")
-public class Area implements Serializable {
+public class DevelopTest implements java.io.Serializable {
 
 	private long id;
-	private String name;
-	private boolean auto;
-	private boolean enabled;
+	private String title;
+	private String content;
 	private Date createdAt;
+	private boolean enabled;
+
+	public DevelopTest() {
+
+	}
+
+	public DevelopTest(long id) {
+		this.id = id;
+	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", unique = true, nullable = false, columnDefinition = "INT(11) UNSIGNED")
+	@Column(name = "id", unique = true, nullable = false)
 	public long getId() {
 		return id;
 	}
@@ -35,31 +42,22 @@ public class Area implements Serializable {
 		this.id = id;
 	}
 
-	@Column(name = "name")
-	public String getName() {
-		return name;
+	@Column(name = "title")
+	public String getTitle() {
+		return title;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	@Column(name = "auto")
-	public boolean isAuto() {
-		return auto;
+	@Column(name = "content")
+	public String getContent() {
+		return content;
 	}
 
-	public void setAuto(boolean auto) {
-		this.auto = auto;
-	}
-
-	@Column(name = "enabled")
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(boolean enabled) {
-		this.enabled = enabled;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	@Column(name = "created_at")
@@ -69,6 +67,15 @@ public class Area implements Serializable {
 
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
+	}
+
+	@Column(name = "enabled")
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 
 }
