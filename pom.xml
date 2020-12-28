@@ -71,6 +71,14 @@
 			<version>2.4</version>
 			<classifier>jdk15</classifier>
 		</dependency>
+		
+		<!-- 윤주추가 -->
+		<dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.20</version>
+            <scope>provided</scope>
+		</dependency>
 
 	</dependencies>
 
