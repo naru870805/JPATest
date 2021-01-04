@@ -1,0 +1,100 @@
+{% extends "shared/layout.default" %}
+
+{% block content %}
+
+<p class="main-copy">
+	hello world!! 
+	<b>{{ board.title }}</b>
+
+</p>
+<div class="thumb-box.positon" >
+	
+	<form align = "" action = "/details" method = "POST">
+		<table>
+			<tr>
+				<td>제목: </td>
+				<td><input type = "text" name = "title" value="{{ board.title }}"><br></td>
+			</tr>
+			<tr>				
+				<td>이름: </td>
+				<td><input type = "text" name = "userName" value="{{ board.userName }}"><br></td>
+			</tr>
+			<tr>	
+				<td>비밀번호:  </td>
+				<td><input type = "text" name = "password" value="{{ board.password }}"><br></td>
+			</tr>
+			<tr>	
+				<td>글내용: </td>
+				<td><textarea name = "content">{{ board.content }}</textarea><br></td>
+			</tr>	
+		</table>
+		<input type= "submit" value = "글쓰기">
+	</form>
+</div>		
+		
+		
+<div>		
+	<form action = "articleList"  method = "GET">
+		<table align = "center" border = "1" width = "70%">
+
+		
+ 			<tr height = "10" align = "center">
+				<td width = "10%">번호</td>
+				<td width = "70%">제목</td>
+				<td width = "10%">작성자</td>
+				<td width = "10%">작성일</td>
+			</tr>		
+			{% for board in articleList %}			
+			<tr align = "center">
+				<td>{{ board.boardId }}</td>
+				
+				<td align = "left">
+				
+					<a href = "/viewArticle/{{board.boardId}}">{{ board.title }}</a>
+				
+				</td>
+				
+				<td>{{ board.userName }}</td>
+				<td>{{ board.createdAt }}</td>
+			</tr> 
+			{% endfor %}
+		</table>
+	 </form>
+	 
+		<br>
+
+	<form action = "/details" method = "GET">
+		<div align = "center">
+			<input type = "text" name = "keyword" placeholder = "키워드를 입력하세요."/>
+			<input type = "submit" value = "검 색"/>
+		</div>
+	</form>	
+		
+	<!-- 기본 -->
+<!-- 	{{ row.id }} <!-- 일반 코드 작성 -->
+	
+	<!-- 기본 -->	
+<!-- 	{% if(row.id == 1) %} --> <!-- 문법 작성 -->
+<!-- 	{% else %} -->
+<!-- 	{% endif %}  --><!-- 문법 끝날 때 항상 end 붙여서 끝내줘야 함 -->
+	
+<!-- 	{% if(row is empty) %} -->
+<!-- 	{% endif %} -->
+	
+	<!-- for문 -->
+<!-- 	{% for r in rows %}
+		{{ loop.index }}
+		{{ r }}
+	{% endfor %}
+ -->	
+	<!-- set -->
+<!-- 	{% set cnt = 'abc' %}
+	{{ cnt }}
+	
+	pebble template
+ -->	
+</div>	
+<div class="gradation">
+	<span></span>
+</div>
+{% endblock %}

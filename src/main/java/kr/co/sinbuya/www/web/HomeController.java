@@ -1,5 +1,8 @@
 package kr.co.sinbuya.www.web;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -34,8 +37,15 @@ public class HomeController {
 
 		DevelopTest entity = testService.findById(1L);
 		
-		System.out.println(entity.getContent());
+		model.addAttribute("row", entity);
+		//System.out.println(entity.getContent());
 	
+		List<String> rows = new ArrayList<>();
+		
+		for(String r : rows) {
+			
+		}
+		
 		return "/default/index";
 	}
 	

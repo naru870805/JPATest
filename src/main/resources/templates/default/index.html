@@ -1,74 +1,39 @@
 {% extends "shared/layout.default" %}
 
-{% block intro_content %}
-{% autoescape false %}
+{% block content %}
 
 <p class="main-copy">
 	hello world!! 
-	<b>{{ article.title }}</b>
+	<b>{{ board.title }}</b>
+
 </p>
 <div class="thumb-box">
-	{% set imgs = toJSONArray(article.galleries) %}
-	<div class="carousel">
-		<div id="main-owl" class="owl-carousel owl-theme" >
-			{% for img in imgs %}
-			<div class="item" data-idx="{{ loop.index }}">
-				<div class="slider">
-					<img src="/img/t.png" data-src="/app_img/thumb/{{ img }}?w=860&h=520&t=ratio" />					
-				</div>									
-			</div>
-			{% endfor %}
-		</div>
-		<div class="thumbs">
-			<section style="width: {{ imgs.size() * 104 }}px">
-				{% for img in imgs %}
-				<div class="thumb" data-idx="{{ loop.index }}">
-					<img src="/img/t.png" data-src="/app_img/thumb/{{ img }}?w=100&h=60&t=ratio" />
-				</div>
-				{% endfor %}
-			</section>
-		</div>
-	</div>
-	<aside>
-		<div class="thumb-contact-header">
-			<div>
-				<span><b>{{ article.title }}</b>에 대하여</span>
-				<span>더욱 자세하게 알고싶으세요?</span>
-				<span>지금상담예약하세요!</span>
-			</div>
-		</div>
-		<div class="thumb-contact-content row">
-			<form class="simple-contact" action="/visit">
-				<input class="col-sm-12 col-xs-6 visitDate dateinput" value="" type="text" name="visitDate" placeholder="상담희망날짜" readonly="readonly">
-				<select class="col-sm-12 col-xs-6" name="visitTime">
-					<option value="">상담희망시간</option>
-					{% for i in range(10, 19) %}
-					<option value="{{i}}:00">{{i}}:00</option>
-					{% endfor %}
-				</select>
-				<button class="col-xs-12">
-					<span>상담예약하기</span>
-				</button>
-			</form>
-			<span class="hidden-xs">지금 상담예약하세요!</span>
-		</div>
-		<div class="our-event">
-			<span>
-				신부야에서 스드메패키지 계약시<br>
-				즉시 현금처럼 사용하는 2만5천포인트 증정!
-			</span>
-		</div>
-		
-	</aside>
+	
+	<!-- 기본 -->
+<!-- 	{{ row.id }} <!-- 일반 코드 작성 -->
+	
+	<!-- 기본 -->	
+<!-- 	{% if(row.id == 1) %} --> <!-- 문법 작성 -->
+<!-- 	{% else %} -->
+<!-- 	{% endif %}  --><!-- 문법 끝날 때 항상 end 붙여서 끝내줘야 함 -->
+	
+<!-- 	{% if(row is empty) %} -->
+<!-- 	{% endif %} -->
+	
+	<!-- for문 -->
+<!-- 	{% for r in rows %}
+		{{ loop.index }}
+		{{ r }}
+	{% endfor %}
+ -->	
+	<!-- set -->
+<!-- 	{% set cnt = 'abc' %}
+	{{ cnt }}
+	
+	pebble template
+ -->	
 </div>	
 <div class="gradation">
 	<span></span>
 </div>
-
-{% endautoescape %}
-{% endblock %}
-
-
-{% block body_content %}
-ss
 {% endblock %}
