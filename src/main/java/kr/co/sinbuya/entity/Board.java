@@ -50,4 +50,9 @@ public class Board implements java.io.Serializable{
 	@Column(name = "created_at")
 	private Date createdAt;
 	
+	
+	
+	
+	
+	
 }

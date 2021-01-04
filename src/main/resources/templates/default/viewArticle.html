@@ -14,14 +14,6 @@ function fn_update(url, boardId){
 	var form = document.querySelector("form");
 	form.setAttribute("method", "POST");
 	form.setAttribute("action", url);
-	
-	var articleNOInput = document.createElement("input");
-	articleNOInput.setAttribute("type", "hidden");
-	articleNOInput.setAttribute("name", "boardId");
-	articleNOInput.setAttribute("value", boardId);
-	
-	form.appendChild(articleNOInput);
-	document.body.appendChild(form);
 	form.submit();
 }
 
@@ -51,7 +43,7 @@ function fn_update(url, boardId){
 					<th>글내용</th>
 						<td>
 							<div>
-								<input type= "text" style = "width: 645px; height: 300px; " value = "{{board.content}}"/>
+								<input type= "text" name="content" style = "width: 645px; height: 300px; " value = "{{board.content}}"/>
 							</div>
 						</td>
 				</tr>
@@ -64,7 +56,7 @@ function fn_update(url, boardId){
 			</table>
 			<br>
 			<input type = "button" value = "뒤로가기" onclick = "backToList(this.form)" />
-			<input type = "button" value = "수정하기" onclick = "fn_update('/delete',{{ board.boardId }})"/>
+			<input type = "button" value = "수정하기" onclick = "fn_update('/update/{{board.boardId}}', {{ board.boardId }})"/>
 			<input type = "submit" value = "삭제하기" />
 		</form>
 		
