@@ -18,7 +18,7 @@ public interface BoardService {
 	
 	void deleteById(long boardId); //D//boardId로 삭제하겠다.
 
-	public List<BoardVO> getArticeList(); //boardVO에 담긴 모든 것들을 가져오겠다.
+	List<Board> getArticeList(); //boardVO에 담긴 모든 것들을 가져오겠다.
 
 	//public List<BoardVO> searchArticle(String keyword); //boardVO에 담긴 것 중에 찾겠다.
 }

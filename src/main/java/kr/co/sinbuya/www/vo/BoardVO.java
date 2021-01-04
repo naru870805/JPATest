@@ -15,6 +15,8 @@ public class BoardVO {
 	private boolean secretType; 
 	private Date createdAt;
 	
+	
+	
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -63,25 +65,6 @@ public class BoardVO {
 	}
 	public void setSecretType(boolean secretType) {
 		this.secretType = secretType;
-	}
-	
-	
-	
-	@Builder
-	public BoardVO(long boardId, String password, String userName, String title, String content, Date createdAt, boolean secretType, boolean enabled) {
-		this.boardId = boardId;
-		this.password = password;
-		this.userName = userName;
-		this.title = title;
-		this.content = content;
-		this.secretType = secretType;
-		this.enabled = enabled;
-		this.createdAt = createdAt;
-		
-		
-	}
-	public BoardVO() {
-		
 	}
 	
 }

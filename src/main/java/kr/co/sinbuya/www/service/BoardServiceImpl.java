@@ -7,9 +7,6 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -70,9 +67,9 @@ public class BoardServiceImpl implements BoardService {
 
 	@Transactional
 	@Override
-	public List<BoardVO> getArticeList() {
+	public List<Board> getArticeList() {
 		List<Board> boards = (List<Board>) boardRepository.findAll();
-		List<BoardVO> boardVOList = new ArrayList<>();
+/*		List<BoardVO> boardVOList = new ArrayList<>();		//이 코드가 위의 한 줄로 처리가 된다.
 		
 		for(Board board : boards) {
 			BoardVO boardVO = BoardVO.builder()
@@ -84,9 +81,9 @@ public class BoardServiceImpl implements BoardService {
 			boardVOList.add(boardVO);
 			
 			System.out.println("boardVOList-->" + boardVOList);
-		}
+		}*/
 		
-		return boardVOList;
+		return boards;
 		
 	}
 

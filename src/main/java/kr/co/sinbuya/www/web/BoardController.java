@@ -36,8 +36,8 @@ public class BoardController {
 	
 	@GetMapping("/details") //글목록
 	public String articleList( ModelMap map) {
-		List<BoardVO> boardVOList = boardService.getArticeList();
-		map.addAttribute("articleList", boardVOList);
+		List<Board> boards = boardService.getArticeList();
+		map.addAttribute("articleList", boards);
 		
 		System.out.println();
 		
@@ -74,6 +74,8 @@ public class BoardController {
 	@GetMapping("/details/{boardId}") //삭제
 	public String delete(@PathVariable("boardId") long boardId) {
 		boardService.deleteById(boardId);
+		
+			
 		
 		return "/default/details";
 	}
