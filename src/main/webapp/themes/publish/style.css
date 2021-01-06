@@ -1,0 +1,573 @@
+@charset "UTF-8";
+
+
+body {
+	background: #ddd;
+}
+
+p {
+	margin: 0;
+}
+
+body>.contents {
+	max-width: 800px;
+	margin: 0 auto;
+	background: #fff;
+}
+
+body #intro {
+	position: relative;
+}
+
+body #intro>div {
+    position: absolute;
+    bottom: 40%;
+    text-align: center;
+    width: 100%;
+}
+
+body #intro>div>.intro_date>p {
+    color: #c09a59;
+    font-size: 12.5vw;		
+}
+
+body #intro>div>.intro_date>p.left {
+    padding-right:10vw;
+}
+
+body #intro>div>.intro_date>p.middle {
+    background-image:url(/img/test/slide.png);
+    width:64px;
+    height:64px;
+    background-repeat:no-repeat;
+    margin:0 auto;
+}
+
+body #intro>div>.intro_date>p.right {
+    padding-left: 10vw;	
+}
+
+body #intro>div .main-txt>p {
+    color: #c09a59;
+    font-size:3.5vw;
+}
+
+body #invitation_wrap{
+	position:relative;
+	width:100%;	
+	background-color:#fdfaf9;
+}
+
+body #invitation_wrap .invitation_contents{
+	width:100%;	
+	padding-top:70px;
+}
+
+body #invitation_wrap .invitation_contents .decoration{
+	background-image:url(/img/test/decoration.png);
+	width:136px;
+	height:43px;
+	background-size:cover;
+	margin:0 auto;
+}
+body #invitation_wrap .invitation_contents .invitation_title{
+	font-size:5vw;
+	color: #c09a59;	
+	text-align:center;
+}
+
+body #invitation_wrap .contents1{
+	width:100%;
+}
+
+body #invitation_wrap .contents1 .in_contents{
+	font-size:2.3vw;
+	color:#444;
+	line-height:45px;
+	text-align:center;	
+	padding-top:120px;
+}
+
+body #invitation_wrap .contents2{
+	position:absolute;
+	width:100%;
+	padding-top:16vw;
+}
+
+body #invitation_wrap .contents2 .name{
+	font-size:2.3vw;
+	line-height: 4.2vw;
+	color:#444;
+	text-align:center;
+}
+
+body #invitation_wrap .contents2 .name span{
+	font-size:1.8vw;
+}
+
+body #invitation_wrap .call{
+	width:100%;
+	padding-top:35%;
+}
+
+body #invitation_wrap .call .call_wrap{
+	text-align:center;
+	padding-top:24vw;
+	paddng-bottom:23.5vw;
+	padding:0;
+	padding-bottom:52px;
+}
+
+body #photo_wrap{
+	position:relative;
+	width:100%;	
+}
+
+body #photo_wrap .photo_contents{
+	position:absolute;
+	top:60px;
+	width:100%;	
+}
+
+body #photo_wrap .photo_contents .decoration2{
+	background-image:url(/img/test/decoration.png);
+	width: 18vw;
+    height: 8vw;
+	background-size:contain;
+	margin:0 auto;
+	background-repeat:no-repeat;
+}
+body #photo_wrap .photo_contents .photo_title{
+	font-size:5vw;
+	color: #c09a59;	
+	text-align:center;
+}
+
+body #photo_wrap .box{
+	padding:200px 6.3vw 0 6.3vw;
+}
+
+body #photo_wrap .photo7_wrap{
+	position:relative;
+	width:100%;	
+}
+
+body #photo_wrap .photo7_wrap>iframe.youtube{
+	width:100%;
+	padding:60px;
+}
+#photo_wrap .form-horizontal .form-group[data-gap='0'] {
+	margin-left: -0px !important;
+    margin-right: -0px !important;	
+}
+
+body #location_wrap{
+	position:relative;
+	width:100%;	
+	background:#fdfaf9;
+}
+
+body #location_wrap .location_contents{
+	position:absolute;
+	top:60px;
+	width:100%;	
+}
+
+body #location_wrap .location_contents .decoration3{
+	background-image:url(/img/test/decoration.png);
+	width:18vw;
+	height:8vw;
+	background-size:contain;
+	margin:0 auto;
+	background-repeat:no-repeat;
+}
+body #location_wrap .location_contents .location_title{
+	font-size:5vw;
+	color: #c09a59;	
+	text-align:center;
+}
+
+body #location_wrap .date{
+	position:absolute;
+	width:100%;
+}
+
+body #location_wrap .date p{
+	text-align:center;
+	font-size:3vw;
+	color:#444;
+	padding-top:250px;
+	line-height:5vw;
+}
+
+body #location_wrap .map{
+	position:relative;
+	width:100%;
+	padding:400px 60px 0 60px;
+}
+body #location_wrap .map .map_wrap{
+	width:100%;
+}
+
+body #location_wrap .traffic .traffic_wrap{
+	padding:7vw 7.2vw;
+}
+
+body #location_wrap .traffic{
+	position:relative;
+	width:100%;
+}
+
+body #location_wrap .traffic .bus{
+	font-size:2.1vw;
+}
+
+
+body #location_wrap .traffic .bus_title{
+	font-size:2.5vw;
+	color:#444;
+	border-bottom:1px solid #f3e3d9; 
+	padding-bottom:10px;
+}
+
+body #location_wrap .traffic .bus .first{
+	padding-top:8px;
+}
+
+body #location_wrap .traffic .bus .p{
+	line-height:22px;
+}
+
+body #location_wrap .traffic .subway{
+	font-size:2.1vw;
+	color:#444;
+	margin-top:30px;
+}
+
+body #location_wrap .traffic .subway p{
+	padding-top:8px;
+}
+
+body #location_wrap .traffic .subway .subway_title{
+	font-size:2.5vw;
+	color:#444;
+	border-bottom:1px solid #f3e3d9; 
+	padding-bottom:10px;
+}
+
+
+
+body #location_wrap .traffic .car{
+	font-size:2.1vw;
+	color:#444;
+	margin-top:30px;
+}
+
+body #location_wrap .traffic .car_title{
+	font-size:2.5vw;
+	color:#444;
+	border-bottom:1px solid #f3e3d9; 
+	padding-bottom:10px;
+}
+
+body #location_wrap .traffic .car p{
+	padding-top:8px;
+}
+
+body #message_wrap{
+	position:relative;
+	width:100%;	
+	padding-top:267px;
+	padding-bottom:150px;
+}
+
+body #message_wrap .message_contents{
+	position:absolute;
+	top:60px;
+	width:100%;	
+}
+
+body #message_wrap .message_contents .decoration4{
+	background-image:url(/img/test/decoration.png);
+	width:136px;
+	height:43px;
+	background-size:cover;
+	margin:0 auto;
+}
+
+body #message_wrap .message_contents .message_title{
+	font-size:5vw;
+	color: #c09a59;	
+	text-align:center;
+}
+
+body #message_wrap .message_contents2{
+	position:absolute;
+	width:100%;
+}
+
+body #message_wrap .message_contents2 p{
+	text-align:center;
+	font-size:2.6vw;
+	color:#444;
+	line-height:4vw;
+	margin-top:-60px;
+}
+
+body #message_wrap .message_contents3{
+	margin:40px 50px 20px 50px;
+	border-top:2px solid #c4bab8;
+	border-bottom:2px solid #c4bab8;
+	padding:20px 0 10px 0;
+}
+
+body #message_wrap .message_contents3 .form_box{
+	padding:0 20px;
+}
+
+body #message_wrap .message_contents3 .form_box p{
+	border-bottom:2px solid #e4e1e1;
+	padding:26px 0 10px 0;
+	font-size:2.38vw;
+}
+
+body #message_wrap .message_contents3 .form_box>button{
+	display:block;
+	width:100%;
+	margin-top:30px;
+	padding:10px;
+	font-size:2.6vw;
+	background:#f7ece5;
+	border:1px solid #eddee0;
+	color:#444;
+}
+
+body #message_wrap .message_contents3 .comments_wrap{
+	padding:0 20px;
+}
+
+body #message_wrap .message_contents3 .comments_box{
+	margin-top:12px;
+	border:1px solid #eddee0;
+	background:#fff;
+	padding:10px;
+	position:relative;
+	color:#444;
+	font-size:16px;
+}
+
+body #message_wrap .message_contents3 .comments_box .full_name{
+	font-size:2.1vw;
+}
+body #message_wrap .message_contents3 .comments_wrap .date{
+	position:absolute;
+	top:10px;
+	right:10px;
+}
+body #message_wrap .message_contents3 .comments_wrap .date .ex{
+	position:absolute;
+	top:24px;
+	right:1px;
+}
+
+body #message_wrap .sns{
+	position:relative;
+	width:100%;
+	padding-bottom:10px;
+	text-align:center;
+}
+
+body #message_wrap .sns .sns_wrap .facebook{
+	top:0;
+	display:inline-block;
+	background:url(/img/test/facebook.png);
+	width:68px;
+	height:68px;
+	background-size:cover;
+}
+
+body #message_wrap .sns .sns_wrap .facebook:after{
+	display:block;
+	height:34px;
+	position:absolute;
+	content:'';
+	border:2px solid #d5c7c7;
+	margin-left:120px;
+	top:16px;
+}
+
+body #message_wrap .sns .sns_wrap .insta:after{
+	display:block;
+	height:34px;
+	position:absolute;
+	content:'';
+	border:2px solid #d5c7c7;
+	margin-left:120px;
+	top:16px;
+}
+
+body #message_wrap .sns .insta{
+	top:0;
+	display:inline-block;
+	background:url(/img/test/insta.png);
+	width:68px;
+	height:68px;
+	background-size:cover;
+}
+
+body #message_wrap .sns .kakao{
+	top:0;
+	display:inline-block;
+	background:url(/img/test/kakao.png);
+	width:68px;
+	height:68px;
+	background-size:cover;
+}
+
+body #message_wrap .sns .sns_wrap>a{
+	margin-left:55px;
+	margin-right:55px;
+}
+
+body #invitation_wrap .call .call_wrap>div{
+	width:22%;
+}
+body #invitation_wrap .call .call_wrap .man_call{
+	display:inline-block;
+}
+
+body #invitation_wrap .call .call_wrap .women_call{
+	display:inline-block;
+}
+
+body #invitation_wrap .call .call_wrap img {
+	width: 100%;
+}
+
+body #invitation_wrap .contents1 .in_contents {
+   color:#444;
+   line-height:4.5vw;
+   text-align:center;
+   padding-top:15vw;
+}
+
+
+@media(min-width: 800px) {
+
+	body #intro>div>p {
+    	font-size: 100px;	
+	}
+	
+	body #intro>div>p.left {
+		padding-right: 80px;
+	}
+	
+	body #intro>div>p.middle {
+		padding-right: -10px;
+	}
+	
+	body #intro>div>p.right {
+    	padding-left: 80px;	
+	}
+	
+	body #intro>div .main-txt>p {
+		font-size:28px;
+	}
+	
+	body .invitation_wrap .contents1{
+		font-size:20px;
+	}	
+	
+	body .invitation_wrap .contents2{
+		font-size:20px;
+	}	
+	
+	body #invitation_wrap .invitation_contents .invitation_title{
+		font-size:50px;
+	}
+	
+	body #invitation_wrap .contents1 .in_contents{
+		font-size:20px;
+	}
+	
+	body #invitation_wrap .contents2 .name{
+		font-size:20px;
+	}
+	
+	body #invitation_wrap .contents2 .name span{
+		font-size:16px;
+	}
+	
+	body #invitation_wrap .call .women_call p{
+		font-size:18px;
+	}
+	
+	body #invitation_wrap .call .man_call p{
+		font-size:18px;
+	}
+	
+	body #photo_wrap .photo_contents .photo_title{
+		font-size:50px;
+	}
+	
+	body #location_wrap .date p{
+		font-size:25px;
+		line-height:38px;
+	}
+	body #location_wrap .traffic .bus_title{
+		font-size:24px;
+	}
+	body #location_wrap .traffic .bus{
+		font-size:20px;
+	}
+	body #location_wrap .traffic .subway .subway_title{
+		font-size:24px;
+	}
+	body #location_wrap .traffic .subway{
+		font-size:20px;
+	}
+	body #location_wrap .traffic .car .car_title{
+		font-size:24px;
+	}
+	body #location_wrap .traffic .car p{
+		font-size:20px;
+	}
+	body #message_wrap .message_contents2 p{
+		font-size:23px;
+		line-height:33px;
+	}
+	body #message_wrap .message_contents3 .form_box p{
+		font-size: 20px;
+	}
+	body #message_wrap .message_contents3 .form_box>button{
+		font-size:22px;
+	}
+	body #message_wrap .message_contents3 .comments_box .full_name{
+		font-size:18px;
+	}
+	body #photo_wrap .photo_contents .decoration{
+		width:136px;
+		height:43px;
+	}
+	body #photo_wrap .photo_contents .decoration2{
+		width:136px;
+		height:43px;
+	}
+	body #location_wrap .location_contents .decoration3{
+		width:136px;
+		height:43px;
+	}
+	body #location_wrap .location_contents .decoration4{
+		width:136px;
+		height:43px;
+	}
+	body #invitation_wrap .contents2{
+		padding-top:130px;
+	}
+	body #invitation_wrap .contents2 .name{
+		line-height:35px;
+	}
+	body #location_wrap .traffic .traffic_wrap{
+		padding:50ox 60px;
+	}
+}
