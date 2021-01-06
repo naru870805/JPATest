@@ -7,6 +7,10 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -18,27 +22,30 @@ import kr.co.sinbuya.www.vo.BoardVO;
 public class BoardServiceImpl implements BoardService {
 	
 	
-	
+
 	
 	@Autowired private BoardRepository boardRepository; //의존성 주입
-
-	@Transactional // 해당 메소드를 실행해 DB에 commit 하겠다.
+	private static final int BLOCK_PAGE_NUM_COUNT = 5;
+	private static final int PAGE_POST_COUNT = 5;
+	
+	@Transactional // 글 상세 보기
 	@Override
 	public Board findById(long boardId) {
 		return boardRepository.findOne(boardId);
 	}
 
-	@Transactional
+
+	@Transactional	//수정
 	@Override
-	public void updateById(long boardId) {
+	public Board updateById(long boardId,BoardVO vo) {
 		Board board = boardRepository.findOne(boardId);
 		if(board != null) {
-			board.setContent("열심히 잘좀 해보세요!!");
-			boardRepository.save(board);
+			board.setContent(vo.getContent());
 		}
+		return boardRepository.save(board);
 	}
 	
-	@Transactional
+	@Transactional	//글쓰기
 	@Override
 	public Board save(BoardVO boardVO) {
 	
@@ -57,18 +64,21 @@ public class BoardServiceImpl implements BoardService {
 		return boardRepository.save(result);
 	}
 	
-	@Transactional
+	@Transactional	//글 삭제
 	@Override
-	public void deleteById(long boardId) {
+	public Board deleteById(long boardId) {
 		
 		boardRepository.delete(boardId);
+		return boardRepository.findOne(boardId);
 
 	}
 
-	@Transactional
+	@Transactional	//글 목록 보기
 	@Override
 	public List<Board> getArticeList() {
 		List<Board> boards = (List<Board>) boardRepository.findAll();
+	
+		
 /*		List<BoardVO> boardVOList = new ArrayList<>();		//이 코드가 위의 한 줄로 처리가 된다.
 		
 		for(Board board : boards) {
@@ -83,16 +93,24 @@ public class BoardServiceImpl implements BoardService {
 			System.out.println("boardVOList-->" + boardVOList);
 		}*/
 		
-		return boards;
 		
+		return boards;
 	}
 
-/*	@Override
-	public List<BoardVO> searchArticle(String keyword) {
-		// TODO Auto-generated method stub
-		return null;
+
+	@Transactional	//검색
+	@Override
+	public List<Board> searchArticle(String keyword) {
+		List<Board> boards = (List<Board>) boardRepository.findByTitleContaining(keyword);		
+		
+		return boards;
 	}
-	*/
 	
-
+	@Transactional	//페이징
+	@Override
+	public Page<Board> findAll(Pageable pageable){
+		
+		return boardRepository.findAll(pageable);
+	}
+	
 }
