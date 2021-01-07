@@ -26,17 +26,20 @@ body #intro>div {
     width: 100%;
 }
 
+
 body #intro>div>.intro_date>p {
     color: #c09a59;
-    font-size: 12.5vw;		
+    font-size: 11.5vw;		
 }
 
 body #intro>div>.intro_date>p.left {
-    padding-right:10vw;
+    padding-right:9vw;
+    padding-bottom:2vw;
 }
 
 body #intro>div>.intro_date>p.right {
-    padding-left: 10vw;	
+    padding-left:13.8vw;
+    padding-bottom:2.5vw;
 }
 
 body #intro>div .main-txt>p {
@@ -64,7 +67,7 @@ body #invitation_wrap .invitation_contents .decoration{
 	background-repeat:no-repeat;
 }
 body #invitation_wrap .invitation_contents .invitation_title{
-	font-size:5vw;
+	font-size:6.2vw;
 	color: #c09a59;	
 	text-align:center;
 }
@@ -129,7 +132,7 @@ body #photo_wrap .photo_contents .decoration2{
 	background-repeat:no-repeat;
 }
 body #photo_wrap .photo_contents .photo_title{
-	font-size:5vw;
+	font-size:6.2vw;
 	color: #c09a59;	
 	text-align:center;
 }
@@ -174,7 +177,7 @@ body #location_wrap .location_contents .decoration3{
 	background-repeat:no-repeat;
 }
 body #location_wrap .location_contents .location_title{
-	font-size:5vw;
+	font-size:6.2vw;
 	color: #c09a59;	
 	text-align:center;
 }
@@ -219,7 +222,7 @@ body #location_wrap .traffic .bus_title{
 	font-size:2.5vw;
 	color:#444;
 	border-bottom:1px solid #f3e3d9; 
-	padding-bottom:10px;
+	padding-bottom:1.2vw;
 }
 
 body #location_wrap .traffic .bus .first{
@@ -233,7 +236,7 @@ body #location_wrap .traffic .bus .p{
 body #location_wrap .traffic .subway{
 	font-size:2.1vw;
 	color:#444;
-	margin-top:30px;
+	padding-top:3.8vw;
 }
 
 body #location_wrap .traffic .subway p{
@@ -244,32 +247,30 @@ body #location_wrap .traffic .subway .subway_title{
 	font-size:2.5vw;
 	color:#444;
 	border-bottom:1px solid #f3e3d9; 
-	padding-bottom:10px;
+	padding-bottom:1.2vw;
 }
-
-
 
 body #location_wrap .traffic .car{
 	font-size:2.1vw;
 	color:#444;
-	margin-top:30px;
+	padding-top:3.8vw;
 }
 
 body #location_wrap .traffic .car_title{
 	font-size:2.5vw;
 	color:#444;
 	border-bottom:1px solid #f3e3d9; 
-	padding-bottom:10px;
+	padding-bottom:1.2vw;
 }
 
 body #location_wrap .traffic .car p{
-	padding-top:8px;
+	padding-top:1.12vw;
 }
 
 body #message_wrap{
 	position:relative;
 	width:100%;	
-	padding-top:33.3vw;
+	padding-top:12vw;
 	padding-bottom:20vw;
 }
 
@@ -279,7 +280,7 @@ body #message_wrap .message_contents{
 	width:100%;	
 }
 
-body #message_wrap .message_contents .decoration4{
+body #message_wrap .message_contents .message_title .decoration4{
 	background-image:url(/img/test/decoration.png);
 	width:18vw;
 	height:8vw;
@@ -289,22 +290,22 @@ body #message_wrap .message_contents .decoration4{
 }
 
 body #message_wrap .message_contents .message_title{
-	font-size:5vw;
+	font-size:6.2vw;
 	color: #c09a59;	
 	text-align:center;
 }
 
 body #message_wrap .message_contents2{
-	position:absolute;
 	width:100%;
+	padding-top:12.6vw;
 }
 
 body #message_wrap .message_contents2 p{
 	text-align:center;
-	font-size:2.6vw;
+	font-size:2.88vw;
 	color:#444;
 	line-height:4vw;
-	margin-top:-8.1vw;
+	padding-top:3.8vw;
 }
 
 body #message_wrap .message_contents3{
@@ -315,7 +316,7 @@ body #message_wrap .message_contents3{
 }
 
 body #message_wrap .message_contents3 .form_box{
-	padding:0 20px;
+	padding:0 2.2vw;
 }
 
 body #message_wrap .message_contents3 .form_box p{
@@ -337,11 +338,11 @@ body #message_wrap .message_contents3 .form_box>button{
 }
 
 body #message_wrap .message_contents3 .comments_wrap{
-	padding:0 2.13px;
+	padding:0 2.2vw;
 }
 
 body #message_wrap .message_contents3 .comments_box{
-	margin-top:12px;
+	margin-top:1.6vw;
 	border:1px solid #eddee0;
 	background:#fff;
 	padding:1.3vw;
@@ -359,9 +360,8 @@ body #message_wrap .message_contents3 .comments_wrap .date{
 	right:10px;
 }
 body #message_wrap .message_contents3 .comments_wrap .date .ex{
-	position:absolute;
-	top:24px;
-	right:1px;
+	position:relative;
+	top:30px;
 }
 
 body #message_wrap .sns{
@@ -527,13 +527,9 @@ body #invitation_wrap .contents1 .in_contents {
 	body #location_wrap .traffic .car p{
 		font-size:20px;
 	}
-	body #message_wrap .message_contents2 p{
-		font-size:23px;
-		line-height:33px;
-		margin-top:-60px;
-	}
+
 	body #message_wrap .message_contents3 .form_box p{
-		font-size: 20px;
+		font-size:20px;
 	}
 	body #message_wrap .message_contents3 .form_box>button{
 		font-size:22px;
@@ -555,6 +551,10 @@ body #invitation_wrap .contents1 .in_contents {
 		height:43px;
 	}
 	body #location_wrap .location_contents .decoration4{
+		width:136px;
+		height:43px;
+	}
+	body #message_wrap .message_contents .message_title .decoration4{
 		width:136px;
 		height:43px;
 	}
@@ -598,16 +598,10 @@ body #invitation_wrap .contents1 .in_contents {
 	body #photo_wrap .photo_contents{
 		padding-top:60px;
 	}
-	body #message_wrap .message_contents3 .comments_wrap{
-		padding:0 20px;
-	}
 	body #message_wrap .message_contents3 .comments_box{
-		padding:1.3vw;
 		font-size:16px;
-	}
-	body #message_wrap{
-		padding-top:33.3vw;
-		padding-bottom:20vw;
+		padding:12px;
+		margin-top: 14px;
 	}
 	body #invitation_wrap .invitation_contents .decoration{
 		width:136px;
@@ -637,7 +631,7 @@ body #invitation_wrap .contents1 .in_contents {
 		margin-left:120px;
 		margin-top:16px;
 	}
-	body #message_wrap .sns .sns_wrap .facebook:after{
+	body #message_wrap .sns .sns_wrap .insta:after{
 		height:34px;
 		margin-left:120px;
 		margin-top:16px;
@@ -646,4 +640,68 @@ body #invitation_wrap .contents1 .in_contents {
 		width:136px;
 		height:43px;
 	}
+	body #location_wrap .traffic .bus_title{
+		padding-bottom:10px;
+	}
+	body #location_wrap .traffic .subway{
+		padding-top:30px;
+	}
+	body #location_wrap .traffic .subway .subway_title{
+		padding-bottom:10px;
+	}
+	body #location_wrap .traffic .car{
+		padding-top:30px;
+	}
+	body #location_wrap .traffic .car_title{
+		padding-bottom:10px;
+	}
+	body #message_wrap .message_contents2{
+		padding-top:100px;
+	}
+	body #message_wrap{
+		padding-top:98px;
+		padding-bottom:100px;
+	}
+	body #message_wrap .message_contents3 .comments_wrap{
+		padding:0 20px;
+	}
+	
+	body #message_wrap .message_contents3 .form_box{
+		padding:0 20px;
+	}
+	body #message_wrap .message_contents3 .comments_wrap .date .ex{
+		top:3.6vw;
+	}
+	body #intro>div>.intro_date>p{
+		font-size:84px;
+		padding-right:60px;
+	}
+	body #location_wrap .location_contents .location_title{
+		font-size:50px;
+	}
+	body #intro>div>.intro_date>p.left{
+		padding-right:70px;
+		padding-bottom:16px;
+	}
+	body #intro>div>.intro_date>p.right{
+		padding-left:110px;
+		padding-right:20px;
+		padding-bottom:20px;
+	}
+	body #message_wrap .message_contents2{
+		padding-top:60px;
+	}
+	body #message_wrap .message_contents .message_title{
+		font-size:50px;
+	}
+	body #message_wrap .message_contents3 .form_box p{
+		padding:30px 0 12px 0;
+	}
+	body #message_wrap .message_contents2 p{
+		font-size:23px;
+		line-height:33px;
+		padding-top:30px;
+	}	
 }
+
+
