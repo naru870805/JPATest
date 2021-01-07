@@ -35,14 +35,6 @@ body #intro>div>.intro_date>p.left {
     padding-right:10vw;
 }
 
-body #intro>div>.intro_date>p.middle {
-    background-image:url(/img/test/slide.png);
-    width:64px;
-    height:64px;
-    background-repeat:no-repeat;
-    margin:0 auto;
-}
-
 body #intro>div>.intro_date>p.right {
     padding-left: 10vw;	
 }
@@ -60,15 +52,16 @@ body #invitation_wrap{
 
 body #invitation_wrap .invitation_contents{
 	width:100%;	
-	padding-top:70px;
+	padding-top:8.7vw;
 }
 
 body #invitation_wrap .invitation_contents .decoration{
 	background-image:url(/img/test/decoration.png);
-	width:136px;
-	height:43px;
-	background-size:cover;
+	width:18vw;
+	height:8vw;
+	background-size:contain;
 	margin:0 auto;
+	background-repeat:no-repeat;
 }
 body #invitation_wrap .invitation_contents .invitation_title{
 	font-size:5vw;
@@ -112,10 +105,8 @@ body #invitation_wrap .call{
 
 body #invitation_wrap .call .call_wrap{
 	text-align:center;
-	padding-top:24vw;
-	paddng-bottom:23.5vw;
-	padding:0;
-	padding-bottom:52px;
+	padding-top:20px;
+	padding-bottom:20px;
 }
 
 body #photo_wrap{
@@ -125,7 +116,7 @@ body #photo_wrap{
 
 body #photo_wrap .photo_contents{
 	position:absolute;
-	top:60px;
+	padding-top:7.5vw;
 	width:100%;	
 }
 
@@ -144,7 +135,7 @@ body #photo_wrap .photo_contents .photo_title{
 }
 
 body #photo_wrap .box{
-	padding:200px 6.3vw 0 6.3vw;
+	padding:25vw 7.5vw 0 7.5vw;
 }
 
 body #photo_wrap .photo7_wrap{
@@ -154,7 +145,8 @@ body #photo_wrap .photo7_wrap{
 
 body #photo_wrap .photo7_wrap>iframe.youtube{
 	width:100%;
-	padding:60px;
+	padding:7.28vw;
+	height:64vw;
 }
 #photo_wrap .form-horizontal .form-group[data-gap='0'] {
 	margin-left: -0px !important;
@@ -169,7 +161,7 @@ body #location_wrap{
 
 body #location_wrap .location_contents{
 	position:absolute;
-	top:60px;
+	padding-top:7.5vw;
 	width:100%;	
 }
 
@@ -196,14 +188,14 @@ body #location_wrap .date p{
 	text-align:center;
 	font-size:3vw;
 	color:#444;
-	padding-top:250px;
+	padding-top:31.2vw;
 	line-height:5vw;
 }
 
 body #location_wrap .map{
 	position:relative;
 	width:100%;
-	padding:400px 60px 0 60px;
+	padding:50vw 7.4vw 0 7.4vw;
 }
 body #location_wrap .map .map_wrap{
 	width:100%;
@@ -277,8 +269,8 @@ body #location_wrap .traffic .car p{
 body #message_wrap{
 	position:relative;
 	width:100%;	
-	padding-top:267px;
-	padding-bottom:150px;
+	padding-top:33.3vw;
+	padding-bottom:20vw;
 }
 
 body #message_wrap .message_contents{
@@ -289,10 +281,11 @@ body #message_wrap .message_contents{
 
 body #message_wrap .message_contents .decoration4{
 	background-image:url(/img/test/decoration.png);
-	width:136px;
-	height:43px;
-	background-size:cover;
+	width:18vw;
+	height:8vw;
+	background-size:contain;
 	margin:0 auto;
+	background-repeat:no-repeat;
 }
 
 body #message_wrap .message_contents .message_title{
@@ -311,14 +304,14 @@ body #message_wrap .message_contents2 p{
 	font-size:2.6vw;
 	color:#444;
 	line-height:4vw;
-	margin-top:-60px;
+	margin-top:-8.1vw;
 }
 
 body #message_wrap .message_contents3{
 	margin:40px 50px 20px 50px;
 	border-top:2px solid #c4bab8;
 	border-bottom:2px solid #c4bab8;
-	padding:20px 0 10px 0;
+	padding:2.5vw 0 1.25vw 0;
 }
 
 body #message_wrap .message_contents3 .form_box{
@@ -327,7 +320,7 @@ body #message_wrap .message_contents3 .form_box{
 
 body #message_wrap .message_contents3 .form_box p{
 	border-bottom:2px solid #e4e1e1;
-	padding:26px 0 10px 0;
+	padding:3.32vw 0 1.2vw 0;
 	font-size:2.38vw;
 }
 
@@ -340,20 +333,21 @@ body #message_wrap .message_contents3 .form_box>button{
 	background:#f7ece5;
 	border:1px solid #eddee0;
 	color:#444;
+	padding:11px 0 10px 0;
 }
 
 body #message_wrap .message_contents3 .comments_wrap{
-	padding:0 20px;
+	padding:0 2.13px;
 }
 
 body #message_wrap .message_contents3 .comments_box{
 	margin-top:12px;
 	border:1px solid #eddee0;
 	background:#fff;
-	padding:10px;
+	padding:1.3vw;
 	position:relative;
 	color:#444;
-	font-size:16px;
+	font-size:2vw;
 }
 
 body #message_wrap .message_contents3 .comments_box .full_name{
@@ -373,7 +367,7 @@ body #message_wrap .message_contents3 .comments_wrap .date .ex{
 body #message_wrap .sns{
 	position:relative;
 	width:100%;
-	padding-bottom:10px;
+	padding-bottom:3vw;
 	text-align:center;
 }
 
@@ -381,52 +375,55 @@ body #message_wrap .sns .sns_wrap .facebook{
 	top:0;
 	display:inline-block;
 	background:url(/img/test/facebook.png);
-	width:68px;
-	height:68px;
-	background-size:cover;
+	width:8.4vw;
+	height:8.4vw;
+	background-size:contain;
+	background-repeat:no-repeat;
 }
 
 body #message_wrap .sns .sns_wrap .facebook:after{
 	display:block;
-	height:34px;
+	height:4.3vw;
 	position:absolute;
 	content:'';
 	border:2px solid #d5c7c7;
-	margin-left:120px;
-	top:16px;
+	margin-left:15vw;
+	margin-top:2vw;
 }
 
 body #message_wrap .sns .sns_wrap .insta:after{
 	display:block;
-	height:34px;
+	height:4.3vw;
 	position:absolute;
 	content:'';
 	border:2px solid #d5c7c7;
-	margin-left:120px;
-	top:16px;
+	margin-left:15vw;
+	margin-top:2vw;
 }
 
 body #message_wrap .sns .insta{
 	top:0;
 	display:inline-block;
 	background:url(/img/test/insta.png);
-	width:68px;
-	height:68px;
-	background-size:cover;
+	width:8.4vw;
+	height:8.4vw;
+	background-size:contain;
+	background-repeat:no-repeat;
 }
 
 body #message_wrap .sns .kakao{
 	top:0;
 	display:inline-block;
 	background:url(/img/test/kakao.png);
-	width:68px;
-	height:68px;
-	background-size:cover;
+	width:8.4vw;
+	height:8.4vw;
+	background-size:contain;
+	background-repeat:no-repeat;
 }
 
 body #message_wrap .sns .sns_wrap>a{
-	margin-left:55px;
-	margin-right:55px;
+	margin-left:6.8vw;
+	margin-right:6.8vw;
 }
 
 body #invitation_wrap .call .call_wrap>div{
@@ -446,7 +443,7 @@ body #invitation_wrap .call .call_wrap img {
 
 body #invitation_wrap .contents1 .in_contents {
    color:#444;
-   line-height:4.5vw;
+   line-height:6vw;
    text-align:center;
    padding-top:15vw;
 }
@@ -488,6 +485,8 @@ body #invitation_wrap .contents1 .in_contents {
 	
 	body #invitation_wrap .contents1 .in_contents{
 		font-size:20px;
+		line-height:45px;
+		padding-top:120px;
 	}
 	
 	body #invitation_wrap .contents2 .name{
@@ -510,10 +509,6 @@ body #invitation_wrap .contents1 .in_contents {
 		font-size:50px;
 	}
 	
-	body #location_wrap .date p{
-		font-size:25px;
-		line-height:38px;
-	}
 	body #location_wrap .traffic .bus_title{
 		font-size:24px;
 	}
@@ -535,12 +530,14 @@ body #invitation_wrap .contents1 .in_contents {
 	body #message_wrap .message_contents2 p{
 		font-size:23px;
 		line-height:33px;
+		margin-top:-60px;
 	}
 	body #message_wrap .message_contents3 .form_box p{
 		font-size: 20px;
 	}
 	body #message_wrap .message_contents3 .form_box>button{
 		font-size:22px;
+		padding:11px 0 10px 0;
 	}
 	body #message_wrap .message_contents3 .comments_box .full_name{
 		font-size:18px;
@@ -568,6 +565,85 @@ body #invitation_wrap .contents1 .in_contents {
 		line-height:35px;
 	}
 	body #location_wrap .traffic .traffic_wrap{
-		padding:50ox 60px;
+		padding:50px 60px;
+	}
+	body #location_wrap .map{
+		padding:400px 60px 0 60px;
+	}
+	body #location_wrap .date p{
+		padding-top:250px;
+		font-size:25px;
+		line-height:38px;
+	}
+	body #message_wrap .sns{
+		padding-bottom:10px;
+	}
+	body #invitation_wrap .invitation_contents{
+		padding-top:70px;
+	}
+	body #invitation_wrap .call .call_wrap{
+		padding-bottom:
+		padding-top:
+	}
+	body #photo_wrap .photo7_wrap>iframe.youtube{
+		height:500px;
+		padding:60px;
+	}
+	body #photo_wrap .box{
+		padding:200px 60px 0 60px;
+	}
+	body #location_wrap .location_contents{
+		padding-top:60px;
+	}
+	body #photo_wrap .photo_contents{
+		padding-top:60px;
+	}
+	body #message_wrap .message_contents3 .comments_wrap{
+		padding:0 20px;
+	}
+	body #message_wrap .message_contents3 .comments_box{
+		padding:1.3vw;
+		font-size:16px;
+	}
+	body #message_wrap{
+		padding-top:33.3vw;
+		padding-bottom:20vw;
+	}
+	body #invitation_wrap .invitation_contents .decoration{
+		width:136px;
+		height:43px;
+	}
+	body #message_wrap .message_contents3{
+		padding:20px 0 10px 0;
+	}
+	body #message_wrap .sns .sns_wrap .facebook{
+		width:68px;
+		height:68px;
+	}
+	body #message_wrap .sns .insta{
+		width:68px;
+		height:68px;
+	}
+	body #message_wrap .sns .kakao{
+		width:68px;
+		height:68px;
+	}	
+	body #message_wrap .sns .sns_wrap>a{
+		margin-left:55px;
+		margin-right:55px
+	}
+	body #message_wrap .sns .sns_wrap .facebook:after{
+		height:34px;
+		margin-left:120px;
+		margin-top:16px;
+	}
+	body #message_wrap .sns .sns_wrap .facebook:after{
+		height:34px;
+		margin-left:120px;
+		margin-top:16px;
+	}
+	body #message_wrap .message_contents .decoration4{
+		width:136px;
+		height:43px;
 	}
 }
