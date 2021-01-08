@@ -12,19 +12,19 @@
 	<form align = "" action = "/details" method = "POST">
 		<table>
 			<tr>
-				<td>제목: </td>
+				<td>제목:&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td><input type = "text" name = "title" value="{{ board.title }}"><br></td>
 			</tr>
 			<tr>				
-				<td>이름: </td>
+				<td>이름:&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td><input type = "text" name = "userName" value="{{ board.userName }}"><br></td>
 			</tr>
 			<tr>	
-				<td>비밀번호:  </td>
+				<td>비밀번호:&nbsp;&nbsp;&nbsp;&nbsp;</td>
 				<td><input type = "text" name = "password" value="{{ board.password }}"><br></td>
 			</tr>
 			<tr>	
-				<td>글내용: </td>
+				<td>글내용:&nbsp;&nbsp;&nbsp;</td>
 				<td><textarea name = "content">{{ board.content }}</textarea><br></td>
 			</tr>	
 		</table>
@@ -43,35 +43,40 @@
 				<td width = "70%">제목</td>
 				<td width = "10%">작성자</td>
 				<td width = "10%">작성일</td>
-			</tr>		
-			{% for board in articleList %}			
+			</tr>					
+			{% for board in articleList %}
+				{% set pNum = articleList.getTotalElements() - ((page * limit) + loop.index) %}
 			<tr align = "center">
-				<td>{{ board.boardId }}</td>
-				<td align = "left"><a href = "/viewArticle/{{board.boardId}}">{{ board.title }}</a></td>
+				<td>{{ pNum }}</td>
+				<td align = "left"><a href = "/viewArticle/{{board.boardId}}?boardNum={{ pNum }}">{{ board.title }}</a></td>
 				<td>{{ board.userName }}</td>
-				<td>{{ board.createdAt }}</td>
+				<td>{{ board.createdAt | date("yyyy-MM-dd HH:mm") }}</td>
 			</tr> 
 			{% endfor %}
 		</table>
 	 </form>
 		<br>
 		
-		
-		
 	<form align = "center" action = "/details" method = "GET">
-		<a href = "?page={{previous}}">prev</a>
-		<a href = "?page={{next}}">next</a>
+		<a href = "?page={{previous}}&keyword={{ keyword }}">prev</a>
+	{% if check == true %}
+		<a href = "?page={{next}}&keyword={{ keyword }}">next</a>
+		{% elseif check == false %}
+		next
+	{% endif %}	
 	</form>
-	
-	
+
 		<br>
-	<form action = "/searchArticle" method = "GET">
+	<form action = "/details" method = "GET">
 		<div align = "center">
-			<input type = "text" name = "keyword" placeholder = "키워드를 입력하세요."/>
+			<input type = "text" value = "{{ keyword }}" name = "keyword" placeholder = "키워드를 입력하세요."/>
 			<input type = "submit" value = "검 색"/>
 		</div>
-	</form>	
+	</form>
+	
 		
+<!-- input value에 값을 넣으면 값이 기본 출력됨 -->
+			
 	<!-- 기본 -->
 <!-- 	{{ row.id }} <!-- 일반 코드 작성 -->
 	

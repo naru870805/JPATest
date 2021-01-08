@@ -10,9 +10,11 @@ import kr.co.sinbuya.entity.Board;
 
 public interface BoardRepository extends CrudRepository<Board, Long> {
 
-	List<Board> findByTitleContaining(String keyword);
+	Page<Board> findByTitleContaining(String keyword, Pageable pabeable);	//검색
 
-	Page<Board> findAll(Pageable pageable);
+	Page<Board> findAll(Pageable pageable);	// 전체조회
+
+	//Page<Board> findByTitle(String keyword, Pageable pageable);
 	
 	
 }

@@ -13,7 +13,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.ui.ModelMap;
 
+import javassist.compiler.ast.Keyword;
 import kr.co.sinbuya.entity.Board;
 import kr.co.sinbuya.repository.BoardRepository;
 import kr.co.sinbuya.www.vo.BoardVO;
@@ -75,10 +77,9 @@ public class BoardServiceImpl implements BoardService {
 
 	@Transactional	//글 목록 보기
 	@Override
-	public List<Board> getArticeList() {
-		List<Board> boards = (List<Board>) boardRepository.findAll();
+	public Page<Board> getArticeList(Pageable pageable) {
+		Page<Board> boards = (Page<Board>) boardRepository.findAll(pageable);
 	
-		
 /*		List<BoardVO> boardVOList = new ArrayList<>();		//이 코드가 위의 한 줄로 처리가 된다.
 		
 		for(Board board : boards) {
@@ -93,15 +94,15 @@ public class BoardServiceImpl implements BoardService {
 			System.out.println("boardVOList-->" + boardVOList);
 		}*/
 		
-		
 		return boards;
 	}
 
 
 	@Transactional	//검색
 	@Override
-	public List<Board> searchArticle(String keyword) {
-		List<Board> boards = (List<Board>) boardRepository.findByTitleContaining(keyword);		
+	public Page<Board> searchArticle(String keyword, Pageable pageable) {
+		System.out.println(keyword);
+		Page<Board> boards = boardRepository.findByTitleContaining(keyword, pageable);
 		
 		return boards;
 	}
@@ -109,8 +110,15 @@ public class BoardServiceImpl implements BoardService {
 	@Transactional	//페이징
 	@Override
 	public Page<Board> findAll(Pageable pageable){
-		
 		return boardRepository.findAll(pageable);
+	}
+	
+	@Transactional	//마지막 페이지 비활성화
+	@Override
+	public Boolean getListCheck(Pageable pageable) {
+		Page<Board> saved = getArticeList(pageable);
+		Boolean check = saved.hasNext();
+		return check;
 	}
 	
 }

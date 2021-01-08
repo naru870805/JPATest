@@ -27,20 +27,25 @@ function fn_update(url, boardId){
 		<form action = "/details/{{boardId}}" method = "GET">
 
  			<table align = "center" border = 1px width = "700px">
+
 			    <tr >
-			   		<th>글번호</th>
-			   			<td align ="left">&nbsp;{{board.boardId}}</td>
+			   		<th style="text-align:center;">글번호</th>
+			   			<td align ="left">&nbsp;{{pNum}}</td>
 				</tr>
 				<tr>
-					<th>제목</th>
+					<th style="text-align:center;">제목</th>
 						<td>&nbsp;{{board.title}}</td>
 				</tr>
 				<tr>
-					<th>작성일</th>
-						<td>&nbsp;{{board.createdAt}}</td>
+					<th style="text-align:center;">작성자</th>
+						<td>&nbsp;{{board.userName}}</td>
 				</tr>
 				<tr>
-					<th>글내용</th>
+					<th style="text-align:center;">작성일</th>
+						<td>&nbsp;{{ board.createdAt | date("yyyy-MM-dd HH:mm")}}</td>
+				</tr>
+				<tr>
+					<th style="text-align:center;">글내용</th>
 						<td>
 							<div>
 								<input type= "text" name="content" style = "width: 645px; height: 300px; " value = "{{board.content}}"/>
@@ -53,15 +58,56 @@ function fn_update(url, boardId){
 							<input type = "text" name = "password" />
 						</td>
 				</tr>
+	
 			</table>
 			<br>
-			<input type = "button" value = "뒤로가기" onclick = "backToList(this.form)" />
+			
+			<input type = "button" value = "돌아가기" onclick = "history.go(-1);" />
 			<input type = "button" value = "수정하기" onclick = "fn_update('/update/{{board.boardId}}', {{ board.boardId }})"/>
 			<input type = "submit" value = "삭제하기" />
+
+		<br><br>
+			<table border = "1px" width = "700px">
+			{% for r in replyList %}
+				<tr>	
+					<th style="text-align:center; width:50px;">{{r.userName}}</th>
+						<td width = "470px">&nbsp;{{r.replyContent}}&nbsp;</td>
+						<td style = "text-align : center;">
+							<span style = "text-align::center; color: #a0a0a0;">[{{r.createdAt | date("yyyy-MM-dd HH:mm")}}]</span>
+						</td>
+						<td style = "text-align : center;" align = "left">
+							<a href = "/defult/viewArtilce/modify/{boardId}" >수정&nbsp;</a>
+							<a href = "/defult/viewArtilce/delete/{boardId}" >삭제</a>
+						</td>
+				</tr>
+			{%endfor%}	
+			</table>
+		</form>
+		<br>
+		<form align = "center" action = "/viewArticle" method = "POST" >
+			<table align = "center"  border = "1px" width = "700px"  rules="none">
+				<tr>
+					<th rowspan="2">댓글<br>작성</th> 
+					<td>작성자
+						<input type = "text" name = "userName" />
+					</td>
+					<td align = "left">비밀번호
+						<input type = "text" name = "password"/>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">	
+						<input type = "text" name = "replyContent" style = "width: 600px; height: 50px; color:#a0a0a0;" />
+						<input type = "submit" value = "저장"/>
+					</td>
+				</tr>				
+			</table>
 		</form>
 		
 
 	</div>
+	
+
 
 </div>
 <div class="gradation">

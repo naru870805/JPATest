@@ -14,9 +14,15 @@ public class BoardVO {
 	private boolean enabled; 
 	private boolean secretType; 
 	private Date createdAt;
+//	private int count;
 	
 	
-	
+/*	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}*/
 	public Date getCreatedAt() {
 		return createdAt;
 	}
