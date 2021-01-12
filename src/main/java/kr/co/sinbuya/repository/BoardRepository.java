@@ -8,13 +8,12 @@ import org.springframework.data.repository.CrudRepository;
 
 import kr.co.sinbuya.entity.Board;
 
-public interface BoardRepository extends CrudRepository<Board, Long> {
+public interface BoardRepository extends CrudRepository<Board, Long> {	//기본 CRUD 자동 사용
 
-	Page<Board> findByTitleContaining(String keyword, Pageable pabeable);	//검색
+	Page<Board> findByTitleContaining(String keyword, Pageable pabeable); //검색
 
-	Page<Board> findAll(Pageable pageable);	// 전체조회
+	Page<Board> findAll(Pageable pageable);	// 페이징 포함 전체조회
 
-	//Page<Board> findByTitle(String keyword, Pageable pageable);
 	
 	
 }

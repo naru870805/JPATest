@@ -27,24 +27,24 @@ public class BoardServiceImpl implements BoardService {
 
 	
 	@Autowired private BoardRepository boardRepository; //의존성 주입
-	private static final int BLOCK_PAGE_NUM_COUNT = 5;
-	private static final int PAGE_POST_COUNT = 5;
+	private static final int BLOCK_PAGE_NUM_COUNT = 5;	// 페이지 번호 5번까지 출력되고 나머지는 prev,next
+	private static final int PAGE_POST_COUNT = 5;	// 한 페이지에 5개 씩 보여주겠다.
 	
 	@Transactional // 글 상세 보기
 	@Override
-	public Board findById(long boardId) {
-		return boardRepository.findOne(boardId);
+	public Board findById(long boardId) {	// 자동생성된 find쿼리를 boardId로 찾겠다.
+		return boardRepository.findOne(boardId);	// boardId 에  해당하는 1개의 정보를 찾겠다.
 	}
 
 
 	@Transactional	//수정
 	@Override
-	public Board updateById(long boardId,BoardVO vo) {
-		Board board = boardRepository.findOne(boardId);
-		if(board != null) {
-			board.setContent(vo.getContent());
+	public Board updateById(long boardId, BoardVO vo) {	// boardId, boardVO에 담긴 정보에 update 쿼리를 사용하겠다.
+		Board board = boardRepository.findOne(boardId); // find한 boardId를 board에 담겠다. 
+		if(board != null) {	//	board가 널이 아니라면
+			board.setContent(vo.getContent());	//	vo에 담긴 content를 board에 set 하겠다.
 		}
-		return boardRepository.save(board);
+		return boardRepository.save(board);	// 자동 CRUD 된 
 	}
 	
 	@Transactional	//글쓰기

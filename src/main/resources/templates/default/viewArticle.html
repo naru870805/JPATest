@@ -18,10 +18,21 @@ function fn_update(url, boardId){
 }
 
 
+function ViewLayer(replyId){
+	document.getElementById("deletePop").style.display = "inline";
+	document.querySelector("#deletePop>form").setAttribute("action", "/delete/" + replyId);
+}
+
+
+function updateLayer(replyContent, replyId){
+	document.getElementById("updatePop").style.display = "inline";
+	document.querySelector("#updatePop>form input[name='replyContent']").value = replyContent;
+	document.querySelector("#updatePop>form").setAttribute("action", "/updateReply/" + replyId);
+}
+
 </script>
 
- <div class="thumb-box.positon" >
-
+ <div class="thumb-box positon" >
 
 	<div align = "center" >
 		<form action = "/details/{{boardId}}" method = "GET">
@@ -66,9 +77,11 @@ function fn_update(url, boardId){
 			<input type = "button" value = "수정하기" onclick = "fn_update('/update/{{board.boardId}}', {{ board.boardId }})"/>
 			<input type = "submit" value = "삭제하기" />
 
+
 		<br><br>
 			<table border = "1px" width = "700px">
-			{% for r in replyList %}
+			{% for r in replyList %}			
+				{%if(r.boardId == board.boardId)%}
 				<tr>	
 					<th style="text-align:center; width:50px;">{{r.userName}}</th>
 						<td width = "470px">&nbsp;{{r.replyContent}}&nbsp;</td>
@@ -76,15 +89,19 @@ function fn_update(url, boardId){
 							<span style = "text-align::center; color: #a0a0a0;">[{{r.createdAt | date("yyyy-MM-dd HH:mm")}}]</span>
 						</td>
 						<td style = "text-align : center;" align = "left">
-							<a href = "/defult/viewArtilce/modify/{boardId}" >수정&nbsp;</a>
-							<a href = "/defult/viewArtilce/delete/{boardId}" >삭제</a>
+							<a href = "javascript:updateLayer('{{ r.replyContent }}', {{r.replyId}})" >수정&nbsp;</a>
+							<a href = "javascript:ViewLayer({{ r.replyId }});">삭제</a>
 						</td>
 				</tr>
+				{%endif%}
 			{%endfor%}	
 			</table>
 		</form>
+		
 		<br>
 		<form align = "center" action = "/viewArticle" method = "POST" >
+			<input type="hidden" name="boardId" value="{{ id }}">
+			<input type="hidden" name="boardNum" value="{{ pNum }}">
 			<table align = "center"  border = "1px" width = "700px"  rules="none">
 				<tr>
 					<th rowspan="2">댓글<br>작성</th> 
@@ -107,12 +124,26 @@ function fn_update(url, boardId){
 
 	</div>
 	
+	<div id = "deletePop" style = "position: absolute; width:100px; height :100px; display:none;" >
+		<form action = "/delete/{{replyId}}" method = "POST">
+			<input type = "text" name = "password" placeholder = "비밀번호를 입력하세요."/>
+			<input type = "hidden" name = "boardNum" value = "{{pNum}}">
+			<input type = "submit" value = "삭제하기" />
+		</form>
+	</div>
 
-
+	<div id = "updatePop" style = "display: none;">
+		<form action = "/updateReply/{{replyId}}" method = "POST">
+			<input type = "text" name = "replyContent" value = ""/>
+			<input type = "text" name = "password" placeholder = "비밀번호를 입력하세요." />
+			<input type = "hidden" name = "replyId" value = "{{replyId}}">
+			<input type = "hidden" name = "boardNum" value = "{{pNum}}"/>
+			<input type = "submit" value = "수정하기" />
+		</form>	
+	</div>
 </div>
 <div class="gradation">
 	<span></span>
 </div>
 {% endblock %}
-	
 	

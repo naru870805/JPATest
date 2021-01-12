@@ -3,13 +3,13 @@ package kr.co.sinbuya.www.vo;
 import java.util.Date;
 
 public class BoardReplyVO {
-	private long boardId;		// 게시글 고유 번호
+	
+	private Long boardId;		// 게시글 고유 번호
 	private Integer depthNum;		// 댓글번호?
 	private String userName;	// 작성자 이름
 	private String password;	// 비밀번호
 	private String replyContent;// 댓글 내용
 	private boolean secretType;	// 공개유무
-	
 	
 	
 	public String getReplyContent() {
@@ -18,10 +18,10 @@ public class BoardReplyVO {
 	public void setReplyContent(String replyContent) {
 		this.replyContent = replyContent;
 	}
-	public long getBoardId() {
+	public Long getBoardId() {
 		return boardId;
 	}
-	public void setBoardId(long boardId) {
+	public void setBoardId(Long boardId) {
 		this.boardId = boardId;
 	}
 	public boolean isSecretType() {

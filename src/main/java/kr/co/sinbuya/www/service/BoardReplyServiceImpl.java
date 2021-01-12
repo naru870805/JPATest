@@ -18,7 +18,7 @@ import kr.co.sinbuya.www.vo.BoardReplyVO;
 public class BoardReplyServiceImpl implements BoardReplyService{
 
 	@Autowired private BoardReplyRepository boardReplyRepository;
-	
+	@Autowired private BoardService boardService;
 	
 
 	
@@ -43,7 +43,8 @@ public class BoardReplyServiceImpl implements BoardReplyService{
 	@Transactional
 	@Override	// 리플 쓰기
 	public BoardReply save(BoardReplyVO replyVO) {
-		
+
+
 		BoardReply reply = new BoardReply();
 		
 		reply.setBoardId(replyVO.getBoardId());
@@ -53,9 +54,7 @@ public class BoardReplyServiceImpl implements BoardReplyService{
 		reply.setReplyContent(replyVO.getReplyContent());
 		reply.setSecretType(true);
 		reply.setEnabled(true);
-		//reply.setDepthNum(replyVO.getDepthNum());
-		
-		System.out.println("reply에 담긴 것----->" + reply.toString());
+
 		
 		return boardReplyRepository.save(reply);
 	}

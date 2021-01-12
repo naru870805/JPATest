@@ -102,10 +102,10 @@ public class BoardController {
 		map.addAttribute("pNum", pNum);
 		
 		Board board = boardService.findById(boardId);
-		List<BoardReply> boardReply = boardReplyService.getReplyList();
+		List<BoardReply> boardReply = boardReplyService.getReplyList();	//boardReply에 get한 리플리스트를 담겠다.
 		map.addAttribute("board", board);
 		map.addAttribute("id", boardId);
-		map.addAttribute("replyList", boardReply);
+		map.addAttribute("replyList", boardReply);	//boardReply를 replyList라고 명하겠다. 
 		
 		
 		return "/default/viewArticle";
@@ -156,7 +156,7 @@ public class BoardController {
 		}
 		
 		board = boardService.deleteById(boardId);
-		map.addAttribute("msg", "비밀번호를 다시 입력하세요.");
+		map.addAttribute("msg", "삭제되었습니다.");
 		map.addAttribute("url", "/details/");
 		
 		return ("/shared/redirect_with_message");

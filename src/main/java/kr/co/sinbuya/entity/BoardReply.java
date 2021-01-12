@@ -16,9 +16,9 @@ import lombok.Setter;
 
 
 @SuppressWarnings("serial") //노란색 밑줄 없앰
-@NoArgsConstructor
+@NoArgsConstructor //기본 생성자 자동 생성
 @Getter //Getter 자동 생성
-@Setter
+@Setter	//Setter 자동 생성
 @Entity // 테이블과 링크될 클래스 
 @Table(name = "test_board_reply") //테이블 이름
 
@@ -44,7 +44,6 @@ public class BoardReply {
 	
 	@Column(name = "createdAt")
 	private Date createdAt;
-	
 	
 	@Column(name = "secretType")
 	private boolean secretType;
